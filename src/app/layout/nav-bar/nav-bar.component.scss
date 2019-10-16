@@ -1,0 +1,178 @@
+.sideNavContainer {
+    background-color: transparent;
+    color: white;
+    font-family: AmaticBold, Arial, Helvetica, sans-serif;
+    letter-spacing: 0.2rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    box-sizing: border-box;
+    width: 13%;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.logo-img {
+    outline: none;
+}
+
+
+/************************* NAVBAR *******************/
+
+.navbar-user {
+    //background-color: #60A4FF;
+    //background-color: rgba($color: #60A4FF, $alpha: 0.4);
+    background-color: transparent;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0px 60px 0 0px;
+    //border: 1px solid rgba($color: gray, $alpha: 0.4);
+    margin-top: 10px;
+    height: 100vh;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-top: 40%;
+    width: 100%;
+}
+
+.container-element {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    outline: none;
+}
+
+.container-element p {
+    font-size: 1.2rem;
+    font-style: bold;
+}
+
+.container-element:hover {
+    //background-color: white;
+    //color: #60A4FF;
+    cursor: pointer;
+}
+
+.container-element:active {
+    //background-color: white;
+    //color: #60A4FF;
+    background-size: 150px 4px;
+    background-repeat: repeat-x;
+    background-position: center 19px;
+}
+
+.activeLink>.css-icon-animation>i {
+    color: black;
+}
+
+.activeLink>div>.container-text {
+    background-size: 150px 4px;
+    background-repeat: repeat-x;
+    background-position: center 19px;
+}
+
+.icon {
+    font-size: 32px;
+    padding: 17px;
+    cursor: pointer;
+}
+
+.css-text-animation {
+    overflow: hidden;
+    display: block;
+    position: relative;
+    height: 20px;
+}
+
+.css-icon-animation {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    height: 25px;
+    width: 20%;
+    padding: 2px;
+}
+
+.css-icon-animation i {
+    margin-bottom: 10px;
+}
+
+.css-icon-animation .hidden-icon {
+    color: black;
+}
+
+.container-element:hover .css-text-animation .container-text {
+    transition-duration: 0.2s;
+    transform: translate(0px, -23.5px);
+}
+
+.container-element:hover .css-icon-animation i {
+    transition-duration: 0.2s;
+    transform: translate(0px, -25px);
+}
+
+.container-element:hover .css-text-animation .container-hidden-text {
+    transition-duration: 0.2s;
+    transform: translate(0px, -23.5px);
+}
+
+.container-text {
+    text-align: center;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+}
+
+.container-hidden-text {
+    text-align: center;
+    color: gray;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+}
+
+.log-out {
+    font-size: 10px;
+    padding: 3%;
+    background-color: white;
+    color: #60A4FF;
+    transition: all;
+    text-decoration: none;
+}
+
+.log-out {
+    border: 1px solid white;
+    background-color: #60A4FF;
+    color: white;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.cv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10%;
+}
+
+.log-out:hover {
+    color: #60A4FF;
+    border: 1px solid #60A4FF;
+    background-color: white;
+}

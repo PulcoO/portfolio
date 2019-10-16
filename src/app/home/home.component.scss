@@ -1,0 +1,20 @@
+.page {
+    margin: 0;
+    padding: 0;
+    font-family: Amatic, Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    background-color: #FAC20B;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    // overflow-y: hidden;
+}
+
+.content {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

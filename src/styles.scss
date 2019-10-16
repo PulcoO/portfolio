@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+
+@font-face {
+    font-family: Amatic;
+    src: url(assets/fonts/Amatic/AmaticSC-Regular.ttf) format("opentype");
+}
+
+@font-face {
+    font-family: AmaticBold;
+    src: url(assets/fonts/Amatic/Amatic-Bold.ttf) format("opentype");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Amatic, Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    // height: 100vh;
+    // overflow-y: hidden;
+}

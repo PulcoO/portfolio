@@ -1,0 +1,72 @@
+<div class="sideNavContainer">
+    <div class="logo">
+        <img class="logo-img" src="assets/logo-ping/blue_logo.png" alt="" routerLink="/">
+    </div>
+    <div class="navbar-user">
+        <div class="container">
+            <div class="container-element" [routerLink]="['/Home']" [routerLinkActive]="['activeLink', 'nonActiveLink']">
+                <div class="css-icon-animation">
+                    <i class="fab fa-phoenix-squadron fa-lg"></i>
+                    <i class="fab fa-phoenix-squadron fa-lg hidden-icon"></i>
+                </div>
+
+                <div class="css-text-animation">
+                    <p class="container-text ">Home</p>
+                    <p class="container-hidden-text">Home</p>
+                </div>
+
+            </div>
+            <div class="container-element " [routerLink]="['/About']" [routerLinkActive]="[ 'activeLink', 'nonActiveLink']">
+                <div class="css-icon-animation">
+                    <i class="far fa-address-card fa-lg"></i>
+                    <i class="far fa-address-card fa-lg hidden-icon"></i>
+                </div>
+
+                <div class="css-text-animation">
+                    <p class="container-text">About</p>
+                    <p class="container-hidden-text">About</p>
+                </div>
+
+            </div>
+            <div class="container-element" [routerLink]="['/Skills']" [routerLinkActive]="['activeLink', 'nonActiveLink']">
+                <div class="css-icon-animation">
+                    <i class="fas fa-hat-wizard fa-lg"></i>
+                    <i class="fas fa-hat-wizard fa-lg hidden-icon"></i>
+                </div>
+
+                <div class="css-text-animation">
+                    <p class="container-text">Skills</p>
+                    <p class="container-hidden-text">Skills</p>
+                </div>
+
+            </div>
+            <div class="container-element" [routerLink]="['/Work&play']" [routerLinkActive]="[ 'activeLink', 'nonActiveLink']">
+                <div class="css-icon-animation">
+                    <i class="fas fa-atlas fa-lg fa-lg"></i>
+                    <i class="fas fa-atlas fa-lg fa-lg hidden-icon"></i>
+                </div>
+
+                <div class="css-text-animation">
+                    <p class="container-text">Work & Play</p>
+                    <p class="container-hidden-text">Work & Play</p>
+                </div>
+
+            </div>
+            <div class="container-element" [routerLink]="['/Contact']" [routerLinkActive]="['activeLink', 'nonActiveLink']">
+                <div class="css-icon-animation">
+                    <i class=" fas fa-mail-bulk fa-lg"></i>
+                    <i class=" fas fa-mail-bulk fa-lg hidden-icon"></i>
+                </div>
+                <div class="css-text-animation">
+                    <p class="container-text ">Contact</p>
+                    <p class="container-hidden-text">Contact</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="cv ">
+            <a (click)="onLogout() " class="log-out " routerLink="/ ">CV</a>
+        </div>
+    </div>
+</div>
