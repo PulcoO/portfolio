@@ -7,6 +7,9 @@
     display: flex;
     flex-direction: column;
     position: absolute;
+    left: 0;
+    bottom: 0;
+    top:0;
     box-sizing: border-box;
     width: 13%;
 }
@@ -44,7 +47,8 @@
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
-    margin-top: 40%;
+    margin-top: auto;
+    margin-bottom: auto;
     width: 100%;
 }
 
@@ -58,14 +62,13 @@
     outline: none;
 }
 
-.container-element p {
-    font-size: 1.2rem;
-    font-style: bold;
-}
-
 .container-element:hover {
     //background-color: white;
     //color: #60A4FF;
+    cursor: pointer;
+}
+
+.container-element .css-text-animation:hover{
     cursor: pointer;
 }
 
@@ -78,7 +81,7 @@
 }
 
 .activeLink>.css-icon-animation>i {
-    color: black;
+    color: grey;
 }
 
 .activeLink>div>.container-text {
@@ -93,42 +96,48 @@
     cursor: pointer;
 }
 
-.css-text-animation {
+.container-element .css-text-animation {
     overflow: hidden;
     display: block;
     position: relative;
-    height: 20px;
+    height: 25px;
+}
+.container-element .css-text-animation p {
+    font-size: 1.2rem;
+    font-style: bold;
 }
 
 .css-icon-animation {
-    display: block;
+    display: flex;
     overflow: hidden;
     position: relative;
-    height: 25px;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    height: 20px;
     width: 20%;
-    padding: 2px;
+    padding: 5px;
 }
 
 .css-icon-animation i {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .css-icon-animation .hidden-icon {
-    color: black;
+    color: grey;
 }
 
 .container-element:hover .css-text-animation .container-text {
-    transition-duration: 0.2s;
+    transition-duration: 0.5s;
     transform: translate(0px, -23.5px);
 }
 
 .container-element:hover .css-icon-animation i {
-    transition-duration: 0.2s;
-    transform: translate(0px, -25px);
+    transition-duration: 0.5s;
+    transform: translate(0px, -30px);
 }
 
 .container-element:hover .css-text-animation .container-hidden-text {
-    transition-duration: 0.2s;
+    transition-duration: 0.5s;
     transform: translate(0px, -23.5px);
 }
 
@@ -147,21 +156,15 @@
     padding: 0;
 }
 
-.log-out {
-    font-size: 10px;
-    padding: 3%;
-    background-color: white;
-    color: #60A4FF;
-    transition: all;
-    text-decoration: none;
-}
-
-.log-out {
+.btn-cv {
     border: 1px solid white;
-    background-color: #60A4FF;
+    background-color: transparent;
     color: white;
     padding: 10px;
-    font-size: 1rem;
+
+    font-size: 1.2rem;
+    text-decoration: none;
+    text-align: center;
 }
 
 .cv {
@@ -171,8 +174,8 @@
     margin-bottom: 10%;
 }
 
-.log-out:hover {
-    color: #60A4FF;
-    border: 1px solid #60A4FF;
+.btn-cv:hover {
+    color: gray;
+    border: 1px solid gray;
     background-color: white;
 }

@@ -1,10 +1,10 @@
 <div class="sideNavContainer">
     <div class="logo">
-        <img class="logo-img" src="assets/logo-ping/blue_logo.png" alt="" routerLink="/">
+        <img class="logo-img" src="" alt="" routerLink="/">
     </div>
     <div class="navbar-user">
         <div class="container">
-            <div class="container-element" [routerLink]="['/Home']" [routerLinkActive]="['activeLink', 'nonActiveLink']">
+            <div class="container-element" [routerLink]="['/Home']" routerLinkActive="active" [routerLinkActive]="['activeLink', 'nonActiveLink']">
                 <div class="css-icon-animation">
                     <i class="fab fa-phoenix-squadron fa-lg"></i>
                     <i class="fab fa-phoenix-squadron fa-lg hidden-icon"></i>
@@ -16,7 +16,7 @@
                 </div>
 
             </div>
-            <div class="container-element " [routerLink]="['/About']" [routerLinkActive]="[ 'activeLink', 'nonActiveLink']">
+            <div class="container-element " [routerLink]="['/About']" routerLinkActive="active" [routerLinkActive]="[ 'activeLink', 'nonActiveLink']">
                 <div class="css-icon-animation">
                     <i class="far fa-address-card fa-lg"></i>
                     <i class="far fa-address-card fa-lg hidden-icon"></i>
@@ -28,7 +28,7 @@
                 </div>
 
             </div>
-            <div class="container-element" [routerLink]="['/Skills']" [routerLinkActive]="['activeLink', 'nonActiveLink']">
+            <div class="container-element" [routerLink]="['/Skills']" routerLinkActive="active" [routerLinkActive]="['activeLink', 'nonActiveLink']">
                 <div class="css-icon-animation">
                     <i class="fas fa-hat-wizard fa-lg"></i>
                     <i class="fas fa-hat-wizard fa-lg hidden-icon"></i>
@@ -40,7 +40,7 @@
                 </div>
 
             </div>
-            <div class="container-element" [routerLink]="['/Work&play']" [routerLinkActive]="[ 'activeLink', 'nonActiveLink']">
+            <div class="container-element" [routerLink]="['/WorkAndPlay']" routerLinkActive="active" [routerLinkActive]="[ 'activeLink', 'nonActiveLink']">
                 <div class="css-icon-animation">
                     <i class="fas fa-atlas fa-lg fa-lg"></i>
                     <i class="fas fa-atlas fa-lg fa-lg hidden-icon"></i>
@@ -52,7 +52,7 @@
                 </div>
 
             </div>
-            <div class="container-element" [routerLink]="['/Contact']" [routerLinkActive]="['activeLink', 'nonActiveLink']">
+            <div class="container-element" [routerLink]="['/Contact']" routerLinkActive="active" [routerLinkActive]="['activeLink', 'nonActiveLink']">
                 <div class="css-icon-animation">
                     <i class=" fas fa-mail-bulk fa-lg"></i>
                     <i class=" fas fa-mail-bulk fa-lg hidden-icon"></i>
@@ -64,9 +64,8 @@
 
             </div>
         </div>
-
         <div class="cv ">
-            <a (click)="onLogout() " class="log-out " routerLink="/ ">CV</a>
+            <a (click)="cvClickPdf() " class="btn-cv " routerLink="/">CV</a>
         </div>
     </div>
 </div>

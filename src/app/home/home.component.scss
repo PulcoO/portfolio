@@ -1,20 +1,71 @@
+//GENERAL
 .page {
     margin: 0;
     padding: 0;
-    font-family: Amatic, Arial, Helvetica, sans-serif;
+    font-family: AmaticBold, Arial, Helvetica, sans-serif;
     box-sizing: border-box;
     background-color: #FAC20B;
     height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: row;
-    // overflow-y: hidden;
 }
 
 .content {
     height: 100vh;
     width: 100%;
     display: flex;
+    flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
 }
+
+section{
+    text-align: center;
+}
+//More Specific
+.titre{
+    margin-bottom: 1rem;
+}
+.circle{
+    display: flex;
+    flex-flow: row nowrap;
+    color: white;
+    padding: 10px;
+}
+.hidden{
+    display: none;
+}
+//More & More Specific
+//Text
+section h1 {
+    font-size: 10rem;
+    font-family: AmaticBold;
+    letter-spacing: 0.8rem;
+    text-transform: uppercase;
+    margin: 0 0 2rem 0;
+    color: white;
+}
+section p{
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    color: grey;
+    margin: 0;
+}
+
+//Circle point
+.circle-point{ 
+    margin: 0 1rem 0 1rem;
+    cursor: pointer;
+}
+
+// .circle-point .fas{
+//     display: none;
+// }
+
+// .circle-point:hover>.far{
+//     display: none;
+// }
+// .circle-point:hover>.fas{
+//     display: block;
+// }

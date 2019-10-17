@@ -1,2 +1,11 @@
-<router-outlet>
-</router-outlet>
+
+<app-nav-bar></app-nav-bar>
+
+<main [@routeAnimations]="outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation']">
+    <router-outlet #outlet="outlet"></router-outlet>
+</main>
+
+<footer>
+    <i class="fas fa-info-circle fa-xl btn-information"></i>
+</footer>
+
