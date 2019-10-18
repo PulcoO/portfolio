@@ -1,5 +1,5 @@
-import { Component, OnInit, HostBinding } from '@angular/core';
-import {titleAnimations} from './home-animations'
+import { Component, OnInit, HostBinding, EventEmitter, Input, Output, } from '@angular/core';
+import {pageAnimations, titleAnimations} from './home-animations'
 import {
   transition,
   trigger,
@@ -17,10 +17,15 @@ import {
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
-  animations : [titleAnimations],
+  animations : [
+    pageAnimations,
+    titleAnimations,
+  ],
 })
 export class HomeComponent implements OnInit {
-  @HostBinding('@titleAnimations')
+  @HostBinding('@pageAnimations')
+  //@HostBinding('@titleAnimations')
+private animation = false;
 
 private activePointClass = "fas fa-circle fa-lg";
 private nonActivePointClass = "far fa-circle fa-lg";
@@ -97,83 +102,37 @@ private backgroundColor = "#FAC20B"
       case 'circle-point-1':
         this.activeTitleId = "title-1"
         this.backgroundColor = "#FAC20B"
+        this.animation = true
         break;
         
       case 'circle-point-2':
         this.activeTitleId = "title-2"
         this.backgroundColor = "#02C9C9"
+        this.animation = false
         break;
 
       case 'circle-point-3':
         this.activeTitleId = "title-3"
         this.backgroundColor = "#E9A1B9"
-        trigger('titleAnimations', [
-          transition(':enter', [
-            query('.content', [
-              style({opacity: '0', transform: 'translateY(-100px)'}),
-              stagger(-30, [
-                animate('500ms cubic-bezier(0.35, 0, 0.25, 1)', 
-                  style({ opacity: 1, transform: 'none' }
-                ))
-              ])
-            ]) 
-            ])
-          ])
-        //console.log(this.activeTitleId)
+        this.animation = true
         break;
 
       case 'circle-point-4':
         this.activeTitleId = "title-4"
         this.backgroundColor = "#333333"
-        trigger('titleAnimations', [
-          transition(':enter', [
-            query('.content', [
-              style({opacity: '0', transform: 'translateY(-100px)'}),
-              stagger(-30, [
-                animate('500ms cubic-bezier(0.35, 0, 0.25, 1)', 
-                  style({ opacity: 1, transform: 'none' }
-                ))
-              ])
-            ]) 
-            ])
-          ])
-        //console.log(this.activeTitleId)
+        this.animation = false
         break;
 
       case 'circle-point-5':
         this.activeTitleId = "title-5"
         this.backgroundColor = "#C2D53F"
-        trigger('titleAnimations', [
-          transition(':enter', [
-            query('.content', [
-              style({opacity: '0', transform: 'translateY(-100px)'}),
-              stagger(-30, [
-                animate('500ms cubic-bezier(0.35, 0, 0.25, 1)', 
-                  style({ opacity: 1, transform: 'none' }
-                ))
-              ])
-            ]) 
-            ])
-          ])
-        //console.log(this.activeTitleId)
+        this.animation = true
         break;
 
       case 'circle-point-6':
         this.activeTitleId = "title-6"
         this.backgroundColor = "#E8A0B8"
-        trigger('titleAnimations', [
-          transition(':enter', [
-            query('.content', [
-              style({opacity: '0', transform: 'translateY(-100px)'}),
-              stagger(-30, [
-                animate('500ms cubic-bezier(0.35, 0, 0.25, 1)', 
-                  style({ opacity: 1, transform: 'none' }
-                ))
-              ])
-            ]) 
-            ])
-          ])
-        //console.log(this.activeTitleId)
+        this.animation = false
         break;
       
     }

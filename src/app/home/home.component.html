@@ -1,31 +1,38 @@
 <div class="page" [ngStyle]="{'background-color': this.backgroundColor }" >
     <div class="content">
-        <section [ngClass]="activeTitleId == 'title-1' ? this.activeTitleClass : this.nonActiveTitleClass" id="titre-1">
+            <button (click)="toggle()">Toggle Open/Closed</button>
+            <div [@.disabled]="isDisabled">
+                    <div [@childAnimations]="isOpen ? 'open' : 'closed'"
+                      class="open-close-container">
+                      <p>The box is now {{ isOpen ? 'Open' : 'Closed' }}!</p>
+                    </div>
+                  </div>
+        <section [ngClass]="activeTitleId == 'title-1' ? this.activeTitleClass : this.nonActiveTitleClass" id="titre-1" [@childAnimations]="animation ? 'in' : 'out'">
             <h1>Hello, I'm Mathieu</h1>
             <p>I'm a junior web developer,</p>
             <p>currently looking for my first experience as developer.</p>
         </section>
-        <section [ngClass]="activeTitleId == 'title-2' ? this.activeTitleClass : this.nonActiveTitleClass" id="titre-2">
+        <section [ngClass]="activeTitleId == 'title-2' ? this.activeTitleClass : this.nonActiveTitleClass" id="titre-2" [@childAnimations]="animation ? 'in' : 'out'">
             <h1>I love digital</h1>
             <p>I'm a junior web developer,</p>
             <p>currently looking for my first experience as developer.</p>
         </section>
-        <section [ngClass]="activeTitleId == 'title-3' ? this.activeTitleClass : this.nonActiveTitleClass" id="titre-3">
+        <section [ngClass]="activeTitleId == 'title-3' ? this.activeTitleClass : this.nonActiveTitleClass" id="titre-3" [@childAnimations]="animation ? 'in' : 'out'">
             <h1>active title 3</h1>
             <p>I'm a junior web developer,</p>
             <p>currently looking for my first experience as developer.</p>
         </section>
-        <section [ngClass]="activeTitleId == 'title-4' ? this.activeTitleClass : this.nonActiveTitleClass" id="titre-4">
+        <section [ngClass]="activeTitleId == 'title-4' ? this.activeTitleClass : this.nonActiveTitleClass" id="titre-4" [@childAnimations]="animation ? 'in' : 'out'">
             <h1>active title 4</h1>
             <p>I'm a junior web developer,</p>
             <p>currently looking for my first experience as developer.</p>
         </section>
-        <section [ngClass]="activeTitleId == 'title-5' ? this.activeTitleClass : this.nonActiveTitleClass" id="titre-5">
+        <section [ngClass]="activeTitleId == 'title-5' ? this.activeTitleClass : this.nonActiveTitleClass" id="titre-5" [@childAnimations]="animation ? 'in' : 'out'">
             <h1>active title 5</h1>
             <p>I'm a junior web developer,</p>
             <p>currently looking for my first experience as developer.</p>
         </section>
-        <section [ngClass]="activeTitleId == 'title-6' ? this.activeTitleClass : this.nonActiveTitleClass" id="titre-6">
+        <section [ngClass]="activeTitleId == 'title-6' ? this.activeTitleClass : this.nonActiveTitleClass" id="titre-6" [@childAnimations]="animation ? 'in' : 'out'">
             <h1>active title 6</h1>
             <p>I'm a junior web developer,</p>
             <p>currently looking for my first experience as developer.</p>
