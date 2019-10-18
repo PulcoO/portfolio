@@ -1,4 +1,4 @@
-<div class="page">
+<div class="page" [ngStyle]="{'background-color': this.backgroundColor }" >
     <div class="content">
         <section [ngClass]="activeTitleId == 'title-1' ? this.activeTitleClass : this.nonActiveTitleClass" id="titre-1">
             <h1>Hello, I'm Mathieu</h1>
