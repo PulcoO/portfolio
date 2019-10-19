@@ -25,7 +25,7 @@ import {
 export class HomeComponent implements OnInit {
   @HostBinding('@pageAnimations')
   //@HostBinding('@titleAnimations')
-private animation = false;
+private animation = true;
 
 private activePointClass = "fas fa-circle fa-lg";
 private nonActivePointClass = "far fa-circle fa-lg";
@@ -48,8 +48,8 @@ private backgroundColor = "#FAC20B"
     setTimeout(() =>{
       setInterval(() =>{
         this.incrementId(this.activePointId)
-      }, 5000)
-    }, 5000);
+      }, 10000)
+    }, 10000);
   }
 
   incrementId(id)

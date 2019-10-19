@@ -26,16 +26,16 @@ import {
     ]
   export const titleAnimations = [
     trigger('childAnimations', [
-            state('out', style({
-              opacity: '1',
-              transform: 'rotate3d(0, 0, 0, 0deg)',
-            })),
-            state('in', style({
-              opacity: '1',
-              transform: 'rotate3d(0, 0, 0, 0deg)'
-            })),
-            transition('* <=> *', [
-              style({ transform: 'translateY(200px)', opacity: '1' }),
+            // state('one', style({
+            //   opacity: '1',
+            //   transform: 'rotate3d(0, 0, 0, 0deg)',
+            // })),
+            // state('two', style({
+            //   opacity: '1',
+            //   transform: 'rotate3d(0, 0, 0, 0deg)'
+            // })),
+            transition('in <=> out', [
+              style({ transform: 'translateY(-200px)', opacity: '0' }),
               animate('1000ms ease-in-out')
             ])
           ])

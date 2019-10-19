@@ -1,16 +1,16 @@
-<div class="page" [ngStyle]="{'background-color': this.backgroundColor }" >
+<div class="page" [ngStyle]="{'background-color': this.backgroundColor }">
     <div class="content">
-            <button (click)="toggle()">Toggle Open/Closed</button>
-            <div [@.disabled]="isDisabled">
-                    <div [@childAnimations]="isOpen ? 'open' : 'closed'"
-                      class="open-close-container">
-                      <p>The box is now {{ isOpen ? 'Open' : 'Closed' }}!</p>
-                    </div>
-                  </div>
+        <button (click)="toggle()">Toggle Open/Closed</button>
+        <div [@.disabled]="isDisabled">
+            <div [@childAnimations]="isOpen ? 'open' : 'closed'" class="open-close-container">
+                <p>The box is now {{ isOpen ? 'Open' : 'Closed' }}!</p>
+            </div>
+        </div>
         <section [ngClass]="activeTitleId == 'title-1' ? this.activeTitleClass : this.nonActiveTitleClass" id="titre-1" [@childAnimations]="animation ? 'in' : 'out'">
             <h1>Hello, I'm Mathieu</h1>
             <p>I'm a junior web developer,</p>
             <p>currently looking for my first experience as developer.</p>
+            <a>READ MORE</a>
         </section>
         <section [ngClass]="activeTitleId == 'title-2' ? this.activeTitleClass : this.nonActiveTitleClass" id="titre-2" [@childAnimations]="animation ? 'in' : 'out'">
             <h1>I love digital</h1>
@@ -37,8 +37,8 @@
             <p>I'm a junior web developer,</p>
             <p>currently looking for my first experience as developer.</p>
         </section>
-        
-        
+
+
 
         <section class="circle">
             <div class="circle-point" id="circle1">
