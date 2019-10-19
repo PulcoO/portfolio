@@ -1,17 +1,5 @@
 import { Component, OnInit, HostBinding, EventEmitter, Input, Output, } from '@angular/core';
 import {pageAnimations, titleAnimations} from './home-animations'
-import {
-  transition,
-  trigger,
-  query,
-  style,
-  animate,
-  group,
-  state,
-  stagger,
-  animateChild,
-  animation
-} from '@angular/animations';
 
 @Component({
   selector: 'app-home',
@@ -24,7 +12,6 @@ import {
 })
 export class HomeComponent implements OnInit {
   @HostBinding('@pageAnimations')
-  //@HostBinding('@titleAnimations')
 private animation = true;
 
 private activePointClass = "fas fa-circle fa-lg";
@@ -102,37 +89,37 @@ private backgroundColor = "#FAC20B"
       case 'circle-point-1':
         this.activeTitleId = "title-1"
         this.backgroundColor = "#FAC20B"
-        this.animation = true
+        this.animation = !this.animation
         break;
         
       case 'circle-point-2':
         this.activeTitleId = "title-2"
         this.backgroundColor = "#02C9C9"
-        this.animation = false
+        this.animation = !this.animation
         break;
 
       case 'circle-point-3':
         this.activeTitleId = "title-3"
         this.backgroundColor = "#E9A1B9"
-        this.animation = true
+        this.animation = !this.animation
         break;
 
       case 'circle-point-4':
         this.activeTitleId = "title-4"
         this.backgroundColor = "#333333"
-        this.animation = false
+        this.animation = !this.animation
         break;
 
       case 'circle-point-5':
         this.activeTitleId = "title-5"
         this.backgroundColor = "#C2D53F"
-        this.animation = true
+        this.animation = !this.animation
         break;
 
       case 'circle-point-6':
         this.activeTitleId = "title-6"
         this.backgroundColor = "#E8A0B8"
-        this.animation = false
+        this.animation = !this.animation
         break;
       
     }

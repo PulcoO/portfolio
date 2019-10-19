@@ -26,6 +26,58 @@ section{
 .title{
     margin-bottom: 1rem;
 }
+.btn {
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    margin: 1rem auto 1rem auto;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 15px;
+    height: 15px;
+    width: 80px;
+    
+    &:hover { text-decoration: none; }
+
+    
+}
+.btn-1 {
+    font-weight: 100;
+    letter-spacing: 0.1rem;
+    
+    svg {
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0; 
+      width: 100%;
+    }
+    
+    rect {
+      fill: none;
+      stroke: white;
+      stroke-width: 3;
+      stroke-dasharray: 422, 0;
+      transition: all 0.35s linear;
+    }
+  }
+  
+  .btn-1:hover {
+    font-weight: 900;
+    letter-spacing: 0.2rem;
+    
+    rect {
+      stroke-width: 5;
+      stroke-dasharray: 15, 310;
+      stroke-dashoffset: 48;
+      transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+  }
 .circle{
     display: flex;
     flex-flow: row nowrap;

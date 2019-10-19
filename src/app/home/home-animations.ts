@@ -25,18 +25,22 @@ import {
       ])
     ]
   export const titleAnimations = [
-    trigger('childAnimations', [
-            // state('one', style({
+    trigger('leftRightAnimations', [
+            // state('out', style({
             //   opacity: '1',
-            //   transform: 'rotate3d(0, 0, 0, 0deg)',
+            //   transform: 'rotate(0deg)',
             // })),
-            // state('two', style({
+            // state('in', style({
             //   opacity: '1',
-            //   transform: 'rotate3d(0, 0, 0, 0deg)'
+            //   transform: 'rotate(0deg)'
             // })),
-            transition('in <=> out', [
-              style({ transform: 'translateY(-200px)', opacity: '0' }),
-              animate('1000ms ease-in-out')
+            transition('* => in', [
+              style({ transform: 'rotate(-10deg)', opacity: '0' }),
+              animate('500ms ease-in-out')
+            ]),
+            transition('* => out', [
+              style({ transform: 'rotate(+10deg)', opacity: '0' }),
+              animate('500ms ease-in-out')
             ])
           ])
   ]
