@@ -12,3 +12,5 @@ import { slideInAnimation } from './route-animations';
 export class AppComponent {
   title = 'portfolio';
 }
+
+

@@ -9,10 +9,16 @@
     font-family: AmaticBold;
     src: url(assets/fonts/Amatic/Amatic-Bold.ttf) format("opentype");
 }
+html
+{
+overflow-x: hidden;
+overflow-y:hidden
+} 
 
-::-webkit-scrollbar {
+::-webkit-scrollbar{
     display: none;
 }
+
 
 body {
     margin: 0;
