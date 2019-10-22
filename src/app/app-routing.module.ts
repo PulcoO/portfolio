@@ -6,6 +6,7 @@ import { ContactComponent } from './contact/contact.component';
 import { SkillsComponent } from './skills/skills.component';
 import { WorkAndPlayComponent } from './work-and-play/work-and-play.component';
 import { HomeComponent } from './home/home.component';
+import { WorkAndPlayDetailsComponent } from './work-and-play-details/work-and-play-details.component';
 
 
 const routes: Routes = [
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'About', component: AboutComponent, data: {animation: 'About'} },
   { path: 'Skills', component: SkillsComponent , data: {animation: 'Skills'} },
   { path: 'WorkAndPlay', component: WorkAndPlayComponent, data: {animation: 'WorkAndPlay'} },
+  { path: 'WorkAndPlay/:workAndPlayName', component: WorkAndPlayDetailsComponent },
   { path: 'Contact', component: ContactComponent, data: {animation: 'Contact'} },
 ];
 

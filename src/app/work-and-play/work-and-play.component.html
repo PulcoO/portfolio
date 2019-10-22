@@ -1,72 +1,20 @@
 <div class="page">
-    <section class="work-and-play-content">
-        <div class="card">
-            <div class="card-content">
+    <section class="work-and-play-content" [@informationButtonAnimation]="animation ? 'out' : 'in'">
+        <div class="card" *ngFor="let exemple of workAndPlayArray" [routerLink]="['/WorkAndPlay', exemple.name]">
+            <div class="card-content" id="{{exemple.id}}">
                 <div class="card-image">
-                    <img src="../../assets/work&play-card/tendances-design-site-web-responsive-design.png" alt="">
+                    <img src="{{exemple.images[0].src}}" alt="{{exemple.images[0].alt}}">
                 </div>
                 <div class="card-header">
-                    <h3 class="header-text">Bio' Connect</h3>
+                    <h3 class="header-text">{{exemple.name}}</h3>
                 </div>
                 <div class="card-description">
-                    <p class="description-text">Just a little description...</p>
+                    <p class="description-text">{{exemple.descriptionMini}}</p>
                 </div>
                 <div class="card-footer">
-                    <i class="fas fa-info-circle fa-xl btn-read-more"></i>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-content">
-                <div class="card-image">
-
-                </div>
-                <div class="card-header">
-                    <h3 class="header-text">Titre</h3>
-                </div>
-                <div class="card-description">
-                    <p class="description-text">Just a little description...</p>
-                </div>
-                <div class="card-footer">
-                    <i class="fas fa-info-circle fa-xl btn-read-more"></i>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-content">
-                <div class="card-image">
-
-                </div>
-                <div class="card-header">
-                    <h3 class="header-text">Titre</h3>
-                </div>
-                <div class="card-description">
-                    <p class="description-text">Just a little description...</p>
-                </div>
-                <div class="card-footer">
-                    <i class="fas fa-info-circle fa-xl btn-read-more"></i>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-content">
-                <div class="card-image">
-
-                </div>
-                <div class="card-header">
-                    <h3 class="header-text">Titre</h3>
-                </div>
-                <div class="card-description">
-                    <p class="description-text">Just a little description...</p>
-                </div>
-                <div class="card-footer">
-                    <i class="fas fa-info-circle fa-xl btn-read-more"></i>
+                    <i class="fas fa-info-circle fa-xl btn-read-more" id="btn-read-more-{{exemple.id}}"></i>
                 </div>
             </div>
         </div>
     </section>
-
 </div>

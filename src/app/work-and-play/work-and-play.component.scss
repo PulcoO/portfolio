@@ -23,13 +23,22 @@
     justify-content: center;
     align-items: center;
 }
+.work-and-play-content-hidden{
+    display: none;
+}
 
 .card {
+    display: block;
     background-color: #FFFFFF;
     height: 180px;
     width: 150px;
     padding: 1%;
     margin: 1%;
+}
+
+.card:hover>.card-content>.card-footer>.btn-read-more{
+    color: #FAC20B;
+    background-color:white;
 }
 
 .card-content {
@@ -74,7 +83,8 @@
     font-size: 1.2rem;
 }
 
-.card-footer .btn-read-more:hover{
-    color: grey;
-    transform: scale(1.2);
+.card-footer .btn-read-more{
+    background-color: white;
+    transition: 0.5s;
+    color: gray;
 }
