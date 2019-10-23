@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: 'About', component: AboutComponent, data: {animation: 'About'} },
   { path: 'Skills', component: SkillsComponent , data: {animation: 'Skills'} },
   { path: 'WorkAndPlay', component: WorkAndPlayComponent, data: {animation: 'WorkAndPlay'} },
-  { path: 'WorkAndPlay/:workAndPlayName', component: WorkAndPlayDetailsComponent },
+  { path: 'WorkAndPlay/:workAndPlayName', component: WorkAndPlayDetailsComponent, data:{animation: 'WorkAndPlayDetails'} },
   { path: 'Contact', component: ContactComponent, data: {animation: 'Contact'} },
 ];
 

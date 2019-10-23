@@ -7,4 +7,5 @@ export class WorkAndPlay {
     descriptionLong: '';
     images: imagesOfWorkAndPlay[];
     githubUrl: '';
+    color: '';
 }

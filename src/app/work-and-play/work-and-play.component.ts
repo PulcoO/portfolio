@@ -1,12 +1,12 @@
 import { Component, HostBinding, OnInit } from '@angular/core';
-import { pageAnimations, informationButtonAnimation } from './work-and-play-animations';
+import { pageAnimations } from './work-and-play-animations';
 import { workAndPlayArray } from './work-and-play-list'
 
 @Component({
   selector: 'app-work-and-play',
   templateUrl: './work-and-play.component.html',
   styleUrls: ['./work-and-play.component.scss'],
-  animations: [pageAnimations,informationButtonAnimation],
+  animations: [pageAnimations],
 })
 export class WorkAndPlayComponent implements OnInit {
   @HostBinding('@pageAnimations')

@@ -55,4 +55,26 @@ import {
             ]),
             query(':enter', animateChild()),
         ]),
+        transition('WorkAndPlay <=> WorkAndPlayDetails',  [
+            style({ position: 'relative' }),
+            query(':enter, :leave', [
+                style({
+                    position: 'absolute',
+                    width: '100%'
+                })
+            ]),
+            query(':enter', [
+            style({ transform: 'translateX(-100%)'})
+            ]),
+            query(':leave', animateChild()),
+            group([
+                query(':leave', [
+                    animate('0.5s ease-in-out', style({ transform: 'translateX(100%)'}))
+                ]),
+                query(':enter', [
+                    animate('0.5s ease-in-out', style({ transform: 'translateX(0%)'}))
+                ])
+            ]),
+            query(':enter', animateChild()),
+        ]),
  ]);

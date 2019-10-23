@@ -29,6 +29,7 @@ export const workAndPlayArray =
 
       ],
     githubUrl : "url exemple",
+    color : "#C2D53F"
     },
     {
       id : "workAndPlay2",
@@ -59,5 +60,6 @@ export const workAndPlayArray =
 
       ],
     githubUrl : "url exemple",
+    color : "#02C9C9"
     },
   ]

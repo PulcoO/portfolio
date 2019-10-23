@@ -1,5 +1,5 @@
 <div class="page">
-    <section class="work-and-play-content" [@informationButtonAnimation]="animation ? 'out' : 'in'">
+    <section class="work-and-play-content" >
         <div class="card" *ngFor="let exemple of workAndPlayArray" [routerLink]="['/WorkAndPlay', exemple.name]">
             <div class="card-content" id="{{exemple.id}}">
                 <div class="card-image">

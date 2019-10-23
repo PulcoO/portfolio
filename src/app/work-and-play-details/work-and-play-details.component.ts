@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { workAndPlayArray } from '../work-and-play/work-and-play-list'
+import { WorkAndPlay } from '../models/workAndPlay.model'
+
 
 @Component({
   selector: 'app-work-and-play-details',
@@ -8,35 +10,43 @@ import { workAndPlayArray } from '../work-and-play/work-and-play-list'
   styleUrls: ['./work-and-play-details.component.scss']
 })
 export class WorkAndPlayDetailsComponent implements OnInit {
+  private workLength: Number;
+  private workDetailIndex : Number;
+  private workDetailArray;
+  private workDetail : WorkAndPlay = {} as WorkAndPlay;
 
-  private workAndPlayDetailExemple : WorkAndPlayModel = {} as WorkAndPlayModel;
+  private backgroundColor: string = "";
+  
 
   constructor( private route: ActivatedRoute) {
     this.route.params.subscribe( params => {
       let workAndPlayName = params.workAndPlayName;
-      //console.log(workAndPlayName)
-      this.getWorkAndPlayExemple(workAndPlayName);
+      this.getWork(workAndPlayName);
+      this.workDetail = this.workDetailArray[0]
+      this.backgroundColor = this.workDetail.color;
+      console.log(this.workDetailIndex)
     })
    }
 
   ngOnInit() {
-    console.log(workAndPlayArray)
+    this.getWorkLength();
+    console.log(this.workLength)
   }
 
-  getWorkAndPlayExemple(workAndPlayName): void
+  getWorkLength(){
+    return this.workLength = workAndPlayArray.length
+  }
+
+  getWork(workAndPlayName)
   {
-    let find = false;
-    workAndPlayArray.forEach(element => {
-      if (element.name == workAndPlayName){
-        //console.log(element)
-        find = true
-      }
-      if (find == true){
-        this.workAndPlayDetailExemple = element
-        console.log(element)
-        console.log(this.getWorkAndPlayExemple.name)
-        return this.workAndPlayDetailExemple
-      }
-    });
+    this.workDetailArray = workAndPlayArray.filter(function (object) 
+    {
+      return object.name == workAndPlayName
+    })
+    this.workDetailIndex = 1 + workAndPlayArray.findIndex(function (object)
+    {
+      return object.name == workAndPlayName
+    })
+    
   }
 }
