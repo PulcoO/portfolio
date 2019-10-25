@@ -13,6 +13,7 @@ import {pageAnimations, titleAnimations} from './home-animations'
 export class HomeComponent implements OnInit {
   @HostBinding('@pageAnimations')
 private animation = true;
+private timer;
 
 private activePointClass = "fas fa-circle fa-lg";
 private nonActivePointClass = "far fa-circle fa-lg";
@@ -27,60 +28,65 @@ private backgroundColor = "#FAC20B"
   constructor() { }
 
   ngOnInit() {
-    this.autoChangeTitle();
+    //setTimeout(() =>{
+      this.autoChangeTitle();
+    //}, 10000);
   }
 
   autoChangeTitle()
   { //Ajouter le fait du clic qui reinitialise l'interval
-    setTimeout(() =>{
-      setInterval(() =>{
-        this.incrementId(this.activePointId)
-      }, 10000)
-    }, 10000);
+
+      this.timer = setInterval(() =>{
+        console.log("start :" +  Date());
+        this.incrementId(this.activePointId);
+      }, 10000);
+  console.log(this.timer);
+
   }
 
-  incrementId(id)
+  incrementId(id: string)
   {
+    let haveMatched = true;
+
       switch (id){
         case 'circle-point-1':
           this.activePointId = 'circle-point-2'
-          this.changeTitle(this.activePointId)
           break
-        
         case 'circle-point-2':
           this.activePointId = 'circle-point-3'
-          this.changeTitle(this.activePointId)
           break
-        
         case 'circle-point-3':
           this.activePointId = 'circle-point-4'
-          this.changeTitle(this.activePointId)
           break
-        
         case 'circle-point-4':
           this.activePointId = 'circle-point-5'
-          this.changeTitle(this.activePointId)
           break
-        
         case 'circle-point-5':
           this.activePointId = 'circle-point-6'
-          this.changeTitle(this.activePointId)
           break
-        
         case 'circle-point-6':
           this.activePointId = 'circle-point-1'
-          this.changeTitle(this.activePointId)
           break
+        default:
+            haveMatched = false;
+      }
+
+      if(haveMatched){
+        this.changeTitle(this.activePointId)
       }
 
   }
   
   addActiveOnClick($event) {
+    clearInterval(this.timer);
+    this.timer = 0;
+    this.autoChangeTitle();
     if ($event.target.id == this.activePointId){
       return ;
     }else{
       this.activePointId = $event.target.id
     }
+    
     this.changeTitle($event.target.id)
   }
 
