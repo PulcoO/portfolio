@@ -1,7 +1,7 @@
 <div class="page">
     <section class="work-and-play-content" >
-        <div class="card" *ngFor="let exemple of workAndPlayArray" [routerLink]="['/WorkAndPlay', exemple.name]">
-            <div class="card-content" id="{{exemple.id}}">
+        <div class="card" *ngFor="let exemple of workAndPlayArray" [routerLink]="['/WorkAndPlay', exemple.name]" id="{{exemple.id}}">
+            <div class="card-content">
                 <div class="card-image">
                     <img src="{{exemple.images[0].src}}" alt="{{exemple.images[0].alt}}">
                 </div>

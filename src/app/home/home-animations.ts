@@ -26,14 +26,6 @@ import {
     ]
   export const titleAnimations = [
     trigger('leftRightAnimations', [
-            // state('out', style({
-            //   opacity: '1',
-            //   transform: 'rotate(0deg)',
-            // })),
-            // state('in', style({
-            //   opacity: '1',
-            //   transform: 'rotate(0deg)'
-            // })),
             transition('* => in', [
               style({ transform: 'rotate(-10deg)', opacity: '0' }),
               animate('500ms ease-in-out')

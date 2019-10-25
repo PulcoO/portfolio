@@ -13,24 +13,72 @@ import {
   export const pageAnimations = [
     trigger('pageAnimations', [
       transition(':enter', [
-        query('.card', [
-          style({opacity: '0', transform: 'translateY(-1000px)'}),
-          stagger(-30, [
-            animate('0.5s', 
-              style({ opacity: 1, transform: 'none' }
-            ))
-          ])
-        ]) 
+        group([
+          query('#workAndPlay-1, #workAndPlay-6 ', [
+            style({opacity: '0', transform: 'translate(-538px, 400px)'}),
+              animate('0.3s', 
+                style({ opacity: 1, transform: 'none' }
+              ))
+          ],{ optional: true }),
+          query('#workAndPlay-2', [
+            style({opacity: '0', transform: 'translate(-269px, 400px)'}),
+              animate('0.3s', 
+                style({ opacity: 1, transform: 'none' }
+              ))
+          ],{ optional: true }),
+          query('#workAndPlay-3', [
+            style({opacity: '0', transform: 'translate(-0px, 400px)'}),
+              animate('0.3s', 
+                style({ opacity: 1, transform: 'none' }
+              ))
+          ],{ optional: true }),
+          query('#workAndPlay-4', [
+            style({opacity: '0', transform: 'translate(269px, 400px)'}),
+              animate('0.3s', 
+                style({ opacity: 1, transform: 'none' }
+              ))
+          ],{ optional: true }),
+          query('#workAndPlay-5', [
+            style({opacity: '0', transform: 'translate(538px, 400px)'}),
+              animate('0.3s', 
+                style({ opacity: 1, transform: 'none' }
+              ))
+          ],{ optional: true }),
+        ])
       ]),
       transition(':leave', [
-        query('.card', [
-          style({opacity: '1', transform: 'none'}),
-          stagger(-30, [
-            animate('0.5s', 
-              style({ opacity: 0, transform: 'translateX(1000px)' }
-            ))
-          ])
-        ]) 
+        group([
+          query('#workAndPlay-1, #workAndPlay-6 ', [
+            style({opacity: '1', transform: 'none'}),
+              animate('0.3s', 
+                style({ opacity: 0, transform: 'translate(-538px, -400px)' }
+              ))
+          ],{ optional: true }),
+          query('#workAndPlay-2', [
+            style({opacity: '1', transform: 'none'}),
+              animate('0.3s', 
+                style({ opacity: 0, transform: 'translate(-269px, -400px)' }
+              ))
+          ],{ optional: true }),
+          query('#workAndPlay-3', [
+            style({opacity: '1', transform: 'none'}),
+              animate('0.3s', 
+                style({ opacity: 0, transform: 'translate(-0px, -400px)' }
+              ))
+          ],{ optional: true }),
+          query('#workAndPlay-4', [
+            style({opacity: '1', transform: 'none'}),
+              animate('0.3s', 
+                style({ opacity: 0, transform: 'translate(269px, -400px)' }
+              ))
+          ],{ optional: true }),
+          query('#workAndPlay-5', [
+            style({opacity: '1', transform: 'none'}),
+              animate('0.3s', 
+                style({ opacity: 0, transform: 'translate(538px, -400px)' }
+              ))
+          ],{ optional: true }),
+        ])
       ])
     ])
   ]

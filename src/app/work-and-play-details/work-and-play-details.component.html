@@ -1,39 +1,73 @@
 <div class="page"[ngStyle]="{'background-color': this.backgroundColor }">
     <section class="work-and-play-details-content" >
+        <div class="background-absolute"></div>
+        <div class="navbar topBar">
+
+        </div>
         <div class="navBar leftBar">
             <div class="navBarIcone">
                 <i class="far fa-arrow-alt-circle-left" appChangeArrowClass ></i>
             </div>
             <p>{{workDetailIndex}} / {{workLength}}</p>
         </div>
-        
-        <div class="card-content">
-
-            <div class="carousel">
-                <div class="card-image">
-                    <img src="{{this.workDetail.images[0].src}}" alt="{{this.workDetail.images[0].alt}}">
-                </div>
-            </div>
-    
-            <div class="card">
-                <div class="card-content" id="{{this.workDetail.id}}">
-                    
-                    <div class="card-header">
-                        <h3 class="header-text">{{this.workDetail.name}}</h3>
-                    </div>
-                    <div class="card-description">
-                        <p class="description-text">{{this.workDetail.descriptionMini}}</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
         <div class="navBar rightBar">
             <div class="navBarIcone">
-                    <i class="far fa-arrow-alt-circle-right" appChangeArrowClass ></i>
+                <i class="far fa-arrow-alt-circle-right" appChangeArrowClass ></i>
             </div>
             <p>{{workDetailIndex}} / {{workLength}}</p>
         </div>
+        
+        <div class="content">
+            <div class="carousel">
+                <div class="carousel-container">
+                    <div class="carousel-image-principal">
+                        
+                        <img src="{{this.workImage.src}}" id="image-{{this.workImage.id}}" alt="{{this.workImage.alt}}">
+                        
+                        <div class="image-principal-footer">
+                            <i class="far fa-arrow-alt-circle-left" appChangeArrowClass ></i>
+                            <div class="compteur-container">
+                                <p class="compteur">{{this.workImageIndex + 1}} / {{this.workImageLength}}</p>
+                            </div>
+                            
+                            <i class="far fa-arrow-alt-circle-right" appChangeArrowClass ></i>
+                        </div>
+                    </div>
+                    <div class="carouseul-miniatures-list" >
+                        <div class="miniature-container" *ngFor="let miniatures of this.workDetail.images" (click)="changePrincipalImage($event.originalTarget.id)">
+                            <img class="miniature" id="image-{{miniatures.id}}" src="{{miniatures.src}}" alt="{{miniatures.alt}}"  >
+                        </div>
+                    </div>
+                </div>
+            </div>
+                
+    
+            <div class="card">
+                <div class="card-header">
+                    <div class="horizontal-line" [ngStyle]="{'background-color': this.backgroundColor }"></div>
+                    <div class="header-text">
+                        <h1 >{{this.workDetail.name}}</h1>
+                    </div>
+                    
+                </div>
+                <div class="card-description-container">
+                    <h5>About</h5>
+                    <div class="card-description">
+                        <p class="description-text">{{this.workDetail.descriptionLong}} Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates quisquam, adipisci, maxime eius ipsa beatae nulla eligendi voluptatum, autem dignissimos ex omnis natus. Harum, nam sit quia facilis est eveniet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe provident incidunt, maiores qui iusto modi asperiores numquam molestiae laboriosam nobis optio natus obcaecati sapiente blanditiis doloribus voluptate ex corrupti ipsum? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque eveniet modi vel quod enim, incidunt odio at rerum. Placeat officiis minus consequatur laudantium atque dolor non sequi quas accusantium voluptates? </p>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="vertical-line" [ngStyle]="{'background-color': this.backgroundColor }"></div>
+                    <div class="tech-description-container">
+                        <h3>Front</h3>
+                        <h3>Back</h3>
+                        <h3>Serveur</h3>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
         
         
     </section>

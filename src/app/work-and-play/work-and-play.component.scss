@@ -12,17 +12,29 @@
 
 .work-and-play-content {
     height: 100vh;
-    width: 80%;
+    width: 87%;
     position: relative;
     top: 0;
     bottom: 0;
     right: 0;
-    left: 13%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
+    left: 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: 200px;
+    grid-gap: 20px;
+    align-content: center;
+    justify-items: center;
+    padding-top: 1%;
+    padding-bottom: 1% ;
+    margin-right: 13%;
+    margin-left: 23%;
 }
+
+@media screen and (max-width: 800px) {
+    .work-and-play-content {
+        grid-template-columns: repeat(1, 1fr);
+    }
+  }
 .work-and-play-content-hidden{
     display: none;
 }

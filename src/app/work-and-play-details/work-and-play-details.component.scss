@@ -20,8 +20,7 @@
     top: 0;
     bottom: 0;
     right: 0;
-    margin: 0% 3% 0% 16%;
-    padding: 1%;
+    margin: 0% 1% 0% 16%;
     background-color: transparent;
     display: flex;
     flex-flow: row wrap;
@@ -29,12 +28,19 @@
     align-items: center;
 }
 .navBar{
+    position: absolute;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
     height: 100px;
     width: 50px;
+}
+.leftBar{
+    left: 0;
+}
+.rightBar{
+    right:0;
 }
 //icon transition
 .fas {
@@ -47,3 +53,182 @@
     transition: all 0.2s linear;
     color: white;
 }
+.content{
+    height: 100%;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;    
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.background-absolute{
+    position: absolute;
+    top: 3%;
+    bottom : 3%;
+    right : 15%;
+    left : 15%;
+    background-color: rgba(255,255,255,0.5);
+}
+.carousel {
+    margin-top: 5%;
+    margin-bottom: 15%;
+    position: relative;
+    background-color: white;
+    height: 600px;
+    width: 800px;
+    
+}
+.carousel-image-principal{
+    border-radius: 15px;
+    position: relative;
+    display: block;
+    height:500px;
+    width:100%;
+    overflow: hidden;
+}
+.carousel-image-principal img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.carousel-header{
+    z-index: 2;
+    position: absolute;
+    top:1%;
+    left:0;
+    height: 7%;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-container{
+    position: relative;
+    height: 600px;
+    width: 800px;
+    padding: 1%;
+    background-color: white;
+}
+
+.image-principal-footer{
+    position: absolute;
+    bottom:0;
+    right:0;
+    left:0;
+    height: 10%;
+    background-color: rgba(17, 16, 16, 0.8);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.image-principal-footer>i{
+    color: white;
+    margin-right: 1%;
+    margin-left: 1%;
+}
+.compteur-container{
+    height: 50%;
+    margin-right: 1%;
+    margin-left:1%;
+    padding:1%;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.compteur{
+    color: white;
+    font-size: 1.2rem;   
+}   
+.carouseul-miniatures-list{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 100px;
+    grid-gap: 20px;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    width: 100%;
+    height: 120px;
+}
+.miniature{
+    height: 100px;
+    cursor: pointer;
+}
+
+.card{
+    width: 500px;
+    margin-top: auto;
+    height:85%;
+    background-color: rgba(255,255,255,1);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+.card-header{
+    top: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    height:40%
+}
+.card-description-container{
+    height: 40%;
+    width: 80%;
+    margin-left:auto;
+    margin-right:auto;
+    padding-top:5%;
+    padding-bottom:5%;
+}
+.card-footer{
+    bottom: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    height: 30%;
+}
+
+.horizontal-line{
+    height:10px;
+    margin-left: 35%;
+    margin-top: 20%;
+}
+.card .header-text{
+    margin-right: auto;
+    margin-left: auto;
+    width: 80%;
+}
+.card-header h1{
+    text-align: left;
+    font-size: 4rem;
+    margin-bottom:5%;
+}
+
+.card-description{
+    height: 80%;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+}
+.card-description .description-text{
+    font-size: 1.2rem;
+}
+
+
+.vertical-line{
+    height:100%;
+    width: 10px;
+    margin-left: 5%;
+}
+.tech-description-container{
+    width: 80%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+
+
+
+

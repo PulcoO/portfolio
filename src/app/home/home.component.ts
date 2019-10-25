@@ -15,120 +15,66 @@ export class HomeComponent implements OnInit {
 private animation = true;
 private timer;
 
-private activePointClass = "fas fa-circle fa-lg";
-private nonActivePointClass = "far fa-circle fa-lg";
-private activePointId = "circle-point-1";
+private maxTitleInt: number = 6;
+private activePointClass: string = "fas fa-circle fa-lg";
+private nonActivePointClass: string = "far fa-circle fa-lg";
+private activePointId: string = "circle-point-1";
 
-private activeTitleClass = "title";
-private nonActiveTitleClass = "title hidden";
-private activeTitleId = "title-1";
+private activeTitleClass: string = "title";
+private nonActiveTitleClass: string = "title hidden";
+private activeTitleId: string = "title-1";
 
-private backgroundColor = "#FAC20B"
+private backgroundColor: string = "#FAC20B"
+private backgroundColorArray = ["#FAC20B","#02C9C9","#E9A1B9","#333333","#C2D53F","#E8A0B8"];
 
   constructor() { }
 
   ngOnInit() {
-    //setTimeout(() =>{
+  //Lanch set time for autochangingTitle
+    setTimeout(() =>{
       this.autoChangeTitle();
-    //}, 10000);
+    }, 10000);
+
   }
 
   autoChangeTitle()
-  { //Ajouter le fait du clic qui reinitialise l'interval
-
+  {
       this.timer = setInterval(() =>{
-        console.log("start :" +  Date());
         this.incrementId(this.activePointId);
       }, 10000);
   console.log(this.timer);
-
   }
 
   incrementId(id: string)
   {
-    let haveMatched = true;
-
-      switch (id){
-        case 'circle-point-1':
-          this.activePointId = 'circle-point-2'
-          break
-        case 'circle-point-2':
-          this.activePointId = 'circle-point-3'
-          break
-        case 'circle-point-3':
-          this.activePointId = 'circle-point-4'
-          break
-        case 'circle-point-4':
-          this.activePointId = 'circle-point-5'
-          break
-        case 'circle-point-5':
-          this.activePointId = 'circle-point-6'
-          break
-        case 'circle-point-6':
-          this.activePointId = 'circle-point-1'
-          break
-        default:
-            haveMatched = false;
-      }
-
-      if(haveMatched){
-        this.changeTitle(this.activePointId)
-      }
+    let idNum = parseInt(id.split('-')[2]);
+    if (idNum && Number(idNum)){
+      idNum = idNum%this.maxTitleInt + 1
+      this.activePointId = 'circle-point-' + idNum
+      console.log (this.activePointId)
+      this.changeTitle(this.activePointId)
+    }else{
+      return console.log('error');
+    }
 
   }
-  
   addActiveOnClick($event) {
     clearInterval(this.timer);
     this.timer = 0;
     this.autoChangeTitle();
     if ($event.target.id == this.activePointId){
-      return ;
+      return;
     }else{
       this.activePointId = $event.target.id
     }
-    
     this.changeTitle($event.target.id)
   }
-
-  changeTitle(id){
-    switch (id){
-      case 'circle-point-1':
-        this.activeTitleId = "title-1"
-        this.backgroundColor = "#FAC20B"
-        this.animation = !this.animation
-        break;
-        
-      case 'circle-point-2':
-        this.activeTitleId = "title-2"
-        this.backgroundColor = "#02C9C9"
-        this.animation = !this.animation
-        break;
-
-      case 'circle-point-3':
-        this.activeTitleId = "title-3"
-        this.backgroundColor = "#E9A1B9"
-        this.animation = !this.animation
-        break;
-
-      case 'circle-point-4':
-        this.activeTitleId = "title-4"
-        this.backgroundColor = "#333333"
-        this.animation = !this.animation
-        break;
-
-      case 'circle-point-5':
-        this.activeTitleId = "title-5"
-        this.backgroundColor = "#C2D53F"
-        this.animation = !this.animation
-        break;
-
-      case 'circle-point-6':
-        this.activeTitleId = "title-6"
-        this.backgroundColor = "#E8A0B8"
-        this.animation = !this.animation
-        break;
-      
+  changeTitle(id: string){
+    let idNum = parseInt(id.split('-')[2]);
+    if (idNum && Number(idNum)){
+      this.activeTitleId = "title-"+ idNum;
+      this.backgroundColor = this.backgroundColorArray[idNum-1]
+      this.animation = !this.animation;
     }
-
   }
 }
