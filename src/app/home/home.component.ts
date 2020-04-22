@@ -12,20 +12,20 @@ import {pageAnimations, titleAnimations} from './home-animations'
 })
 export class HomeComponent implements OnInit {
   @HostBinding('@pageAnimations')
-private animation = true;
-private timer;
+animation = true;
+timer;
 
-private maxTitleInt: number = 6;
-private activePointClass: string = "fas fa-circle fa-lg";
-private nonActivePointClass: string = "far fa-circle fa-lg";
-private activePointId: string = "circle-point-1";
+maxTitleInt: number = 6;
+activePointClass: string = "fas fa-circle fa-lg";
+nonActivePointClass: string = "far fa-circle fa-lg";
+activePointId: string = "circle-point-1";
 
-private activeTitleClass: string = "title";
-private nonActiveTitleClass: string = "title hidden";
-private activeTitleId: string = "title-1";
+activeTitleClass: string = "title";
+nonActiveTitleClass: string = "title hidden";
+activeTitleId: string = "title-1";
 
-private backgroundColor: string = "#FAC20B"
-private backgroundColorArray = ["#FAC20B","#02C9C9","#E9A1B9","#333333","#C2D53F","#E8A0B8"];
+backgroundColor: string = "#FAC20B"
+backgroundColorArray = ["#FAC20B","#02C9C9","#E9A1B9","#333333","#C2D53F","#E8A0B8"];
 
   constructor() { }
 

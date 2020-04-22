@@ -7,11 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  private footerVisibility = false;
-  private footerClassActive = "footer footer-container-active";
-  private footerClassInactive = "footer footer-container-inactive";
-  private btnFooterClassInfo = "fas fa-info-circle fa-xl btn-information"
-  private btnFooterClassArrowDown = "fas fa-arrow-circle-down fa-xl btn-information"
+  footerVisibility = false;
+  footerClassActive = "footer footer-container-active";
+  footerClassInactive = "footer footer-container-inactive";
+  btnFooterClassInfo = "fas fa-info-circle fa-xl btn-information"
+  btnFooterClassArrowDown = "fas fa-arrow-circle-down fa-xl btn-information"
 
   constructor() { }
 

@@ -10,9 +10,9 @@ import { workAndPlayArray } from './work-and-play-list'
 })
 export class WorkAndPlayComponent implements OnInit {
   @HostBinding('@pageAnimations')
-  private workAndPlayArray = workAndPlayArray
+  workAndPlayArray = workAndPlayArray
 
-  private animatePage = true;
+  animatePage = true;
 
 
   constructor() { }

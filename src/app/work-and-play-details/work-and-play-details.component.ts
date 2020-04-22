@@ -11,19 +11,19 @@ import { imagesOfWorkAndPlay } from '../models/imagesOfWorkAndPlay.model'
   styleUrls: ['./work-and-play-details.component.scss']
 })
 export class WorkAndPlayDetailsComponent implements OnInit {
-  private workLength: Number;
-  private workDetailIndex : Number;
-  private workDetailArray;
-  private workDetail : WorkAndPlay = {} as WorkAndPlay;
+  workLength: Number;
+  workDetailIndex : Number;
+  workDetailArray;
+  workDetail : WorkAndPlay = {} as WorkAndPlay;
 
-  private backgroundColor: string = "";
+  backgroundColor: string = "";
 
-  private workImage;
-  private previousImage;
-  private nextImage; 
-  private workImageArray = this.workDetail.images;
-  private workImageIndex = 0;
-  private workImageLength;
+  workImage;
+  previousImage;
+  nextImage; 
+  workImageArray = this.workDetail.images;
+  workImageIndex = 0;
+  workImageLength;
   
 
   constructor( private route: ActivatedRoute) {
