@@ -1,11 +1,17 @@
 
-<app-nav-bar></app-nav-bar>
+    <nav>
+        <app-nav-bar></app-nav-bar>
+    </nav>
+    
+    
+    <div class="main_container">
+        <main [@routeAnimations]="outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation']">
+            <router-outlet #outlet="outlet"></router-outlet>
+        </main>
+    </div>
+    
 
-<main [@routeAnimations]="outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation']">
-    <router-outlet #outlet="outlet"></router-outlet>
-</main>
-
-<footer>
-    <app-footer></app-footer>
-</footer>
+    <footer>
+        <app-footer></app-footer>
+    </footer>
 

@@ -8,7 +8,6 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    // overflow-y: hidden;
 }
 
 .content {
@@ -17,4 +16,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.card {
+    height: 40%;
+    width: 30%;
+    display: flex;
+    background-color: WHITE;
+    border: 1 solid black;
+    flex-direction: column;
+}
+.card_descriptif_form{
+    display: flex;
+    flex-flow: row wrap ;
 }

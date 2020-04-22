@@ -24,8 +24,6 @@
 /************************* NAVBAR *******************/
 
 .navbar-user {
-    background-color: transparent;
-    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -38,8 +36,9 @@
     position: absolute;
     flex-direction: column;
     justify-content: center;
-    height: 60%;
+    height: 40%;
     width: 100%;
+    border-right: 1px ridge white;
 }
 
 .container-element {

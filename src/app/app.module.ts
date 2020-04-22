@@ -10,7 +10,7 @@ import { SkillsComponent } from './skills/skills.component';
 import { WorkAndPlayComponent } from './work-and-play/work-and-play.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
-import { FooterComponent } from './footer/footer.component';
+import { FooterComponent } from './layout/footer/footer.component';
 import { WorkAndPlayDetailsComponent } from './work-and-play-details/work-and-play-details.component';
 import { ChangeArrowClassDirective } from './directives/change-arrow-class.directive';
 
