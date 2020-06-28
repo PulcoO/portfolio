@@ -1,6 +1,10 @@
 import { Component, HostBinding, OnInit } from '@angular/core';
 import { pageAnimations } from './work-and-play-animations';
-import { workAndPlayArray } from './work-and-play-list'
+
+// MODELS
+import { WorkAndPlay } from '../models/WorkAndPlay/WorkAndPlay.model';
+// SERVICES
+import { WorkAndPlayService } from '../services/workAndPlay/work-and-play.service';
 
 @Component({
   selector: 'app-work-and-play',
@@ -10,14 +14,25 @@ import { workAndPlayArray } from './work-and-play-list'
 })
 export class WorkAndPlayComponent implements OnInit {
   @HostBinding('@pageAnimations')
-  workAndPlayArray = workAndPlayArray
-
   animatePage = true;
+  
+  private works : WorkAndPlay[];
+
+  
 
 
-  constructor() { }
+  constructor(
+    private workService : WorkAndPlayService
+  ) { }
 
   ngOnInit() {
+    //populate 
+    this.getWorks();
+  }
+
+  getWorks(): void {
+    this.workService.getWorks()
+        .subscribe(works => this.works= works);
   }
 
 }

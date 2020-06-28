@@ -1,18 +1,18 @@
 <div class="page">
     <section class="work-and-play-content" >
-        <div class="card" *ngFor="let exemple of workAndPlayArray" [routerLink]="['/WorkAndPlay', exemple.name]" id="{{exemple.id}}">
+        <div class="card" *ngFor="let work of works" [routerLink]="['/WorkAndPlay', work.name]" id="{{work.id}}">
             <div class="card-content">
                 <div class="card-image">
-                    <img src="{{exemple.images[0].src}}" alt="{{exemple.images[0].alt}}">
+                    <img src="{{work.images[0].src}}" alt="{{work.images[0].alt}}">
                 </div>
                 <div class="card-header">
-                    <h3 class="header-text">{{exemple.name}}</h3>
+                    <h3 class="header-text">{{work.name}}</h3>
                 </div>
                 <div class="card-description">
-                    <p class="description-text">{{exemple.descriptionMini}}</p>
+                    <p class="description-text">{{work.descriptionMini}}</p>
                 </div>
                 <div class="card-footer">
-                    <i class="fas fa-info-circle fa-xl btn-read-more" id="btn-read-more-{{exemple.id}}"></i>
+                    <i class="fas fa-info-circle fa-xl btn-read-more" id="btn-read-more-{{work.id}}"></i>
                 </div>
             </div>
         </div>

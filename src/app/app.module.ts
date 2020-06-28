@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,7 @@ import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { WorkAndPlayDetailsComponent } from './work-and-play-details/work-and-play-details.component';
 import { ChangeArrowClassDirective } from './directives/change-arrow-class.directive';
+import { ReadMoreBtnComponent } from './layout/buttons/read-more-btn/read-more-btn.component';
 
 @NgModule({
   declarations: [
@@ -26,11 +28,13 @@ import { ChangeArrowClassDirective } from './directives/change-arrow-class.direc
     FooterComponent,
     WorkAndPlayDetailsComponent,
     ChangeArrowClassDirective,
+    ReadMoreBtnComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MDBBootstrapModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

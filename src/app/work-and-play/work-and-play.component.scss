@@ -3,10 +3,10 @@
     padding: 0;
     font-family: Amatic, Arial, Helvetica, sans-serif;
     box-sizing: border-box;
-    background-color: #DADADA;
+    background-color: #02C9C9;
     height: 100vh;
     width: 100%;
-    overflow: scroll;
+    
 }
 
 .work-and-play-content {
@@ -18,10 +18,12 @@
     align-content: center;
     justify-items: center;
     justify-content: center;
-    padding-right: 3%;
-    padding-left: 13%;
+    padding-right: 16%; // centrer vis a vis de la nav bar 
+    padding-left: 16%; // centrer
     padding-top: auto;
     padding-bottom: auto;
+    overflow: scroll;
+    
 }
 
 @media screen and (max-width: 800px) {

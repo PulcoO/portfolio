@@ -1,8 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+
 import { workAndPlayArray } from '../work-and-play/work-and-play-list'
-import { WorkAndPlay } from '../models/workAndPlay.model'
-import { imagesOfWorkAndPlay } from '../models/imagesOfWorkAndPlay.model'
+
+import { WorkAndPlay } from '../models/WorkAndPlay/WorkAndPlay.model'
+import { WorkAndPlayImages } from '../models/WorkAndPlay/WorkAndPlayImage.model'
+
+import { WorkAndPlayService } from '../services/workAndPlay/work-and-play.service';
 
 
 @Component({

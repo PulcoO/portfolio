@@ -27,12 +27,11 @@ section{
     margin-bottom: 1rem;
 }
 .btn {
-    color: white;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin: 1rem auto 1rem auto;
     position: relative;
     text-decoration: none;
@@ -40,7 +39,7 @@ section{
     text-align: center;
     padding: 15px;
     height: 15px;
-    width: 80px;
+    width: 90px;
     
     &:hover { text-decoration: none; }
 
@@ -69,7 +68,7 @@ section{
   
   .btn-1:hover {
     font-weight: 900;
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.1rem;
     
     rect {
       stroke-width: 5;

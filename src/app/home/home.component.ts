@@ -10,6 +10,7 @@ import {pageAnimations, titleAnimations} from './home-animations'
     titleAnimations,
   ],
 })
+
 export class HomeComponent implements OnInit {
   @HostBinding('@pageAnimations')
 animation = true;
@@ -58,6 +59,7 @@ backgroundColorArray = ["#FAC20B","#02C9C9","#E9A1B9","#333333","#C2D53F","#E8A0
     }
 
   }
+
   addActiveOnClick($event) {
     clearInterval(this.timer);
     this.timer = 0;
@@ -69,6 +71,7 @@ backgroundColorArray = ["#FAC20B","#02C9C9","#E9A1B9","#333333","#C2D53F","#E8A0
     }
     this.changeTitle($event.target.id)
   }
+  
   changeTitle(id: string){
     let idNum = parseInt(id.split('-')[2]);
     if (idNum && Number(idNum)){
