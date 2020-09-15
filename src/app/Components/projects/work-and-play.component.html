@@ -1,0 +1,20 @@
+<div class="page">
+    <section class="project_content" >
+        <div class="card" *ngFor="let project of _projects" [routerLink]="['/Projects', project.name]" id="{{project.id}}">
+            <div class="card-content">
+                <div class="card-image">
+                    <img src="{{project.images[0].src}}" alt="{{project.images[0].alt}}">
+                </div>
+                <div class="card-header">
+                    <h3 class="header-text">{{project.name}}</h3>
+                </div>
+                <div class="card-description">
+                    <p class="description-text">{{project.descriptionMini}}</p>
+                </div>
+                <div class="card-footer">
+                    <i class="fas fa-info-circle fa-xl btn-read-more" id="btn-read-more-{{project.id}}"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

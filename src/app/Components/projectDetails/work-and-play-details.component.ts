@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-
-import { workAndPlayArray } from '../work-and-play/work-and-play-list'
-
-import { WorkAndPlay } from '../models/WorkAndPlay/WorkAndPlay.model'
-import { WorkAndPlayImages } from '../models/WorkAndPlay/WorkAndPlayImage.model'
-
-import { WorkAndPlayService } from '../services/workAndPlay/work-and-play.service';
+//DATA
+import { PROJECTS } from '../../_Data/Projects'
+//MODELS
+import { Project } from '../../_Models/Project/Project.model'
+import { ProjectImage } from '../../_Models/Project/ProjectImage.model'
+//SERVICES
+import { ProjectService } from '../../_Services/Project/Project.service';
 
 
 @Component({
@@ -18,7 +18,7 @@ export class WorkAndPlayDetailsComponent implements OnInit {
   workLength: Number;
   workDetailIndex : Number;
   workDetailArray;
-  workDetail : WorkAndPlay = {} as WorkAndPlay;
+  workDetail : Project = {} as Project;
 
   backgroundColor: string = "";
 
@@ -46,7 +46,7 @@ export class WorkAndPlayDetailsComponent implements OnInit {
   }
 
   getWorkLength(){
-    return this.workLength = workAndPlayArray.length
+    return this.workLength = PROJECTS.length
   }
   getWorkImagesLenght(){
     return this.workImageLength = this.workDetail.images.length
@@ -78,11 +78,11 @@ export class WorkAndPlayDetailsComponent implements OnInit {
 
   getWork(workAndPlayName)
   {
-    this.workDetailArray = workAndPlayArray.filter(function (object) 
+    this.workDetailArray = PROJECTS.filter(function (object) 
     {
       return object.name == workAndPlayName
     })
-    this.workDetailIndex = 1 + workAndPlayArray.findIndex(function (object)
+    this.workDetailIndex = 1 + PROJECTS.findIndex(function (object)
     {
       return object.name == workAndPlayName
     })

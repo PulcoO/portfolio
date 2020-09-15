@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { AboutComponent } from './about/about.component';
-import { ContactComponent } from './contact/contact.component';
-import { SkillsComponent } from './skills/skills.component';
-import { WorkAndPlayComponent } from './work-and-play/work-and-play.component';
-import { HomeComponent } from './home/home.component';
-import { WorkAndPlayDetailsComponent } from './work-and-play-details/work-and-play-details.component';
+import { AboutComponent } from './Components/about/about.component';
+import { ContactComponent } from './Components/contact/contact.component';
+import { SkillsComponent } from './Components/skills/skills.component';
+import { WorkAndPlayComponent } from './Components/projects/work-and-play.component';
+import { HomeComponent } from './Components/home/home.component';
+import { WorkAndPlayDetailsComponent } from './Components/projectDetails/work-and-play-details.component';
 
 
 const routes: Routes = [
@@ -14,8 +14,8 @@ const routes: Routes = [
   { path: 'Home', component: HomeComponent, data: {animation: 'Home'} },
   { path: 'About', component: AboutComponent, data: {animation: 'About'} },
   { path: 'Skills', component: SkillsComponent , data: {animation: 'Skills'} },
-  { path: 'WorkAndPlay', component: WorkAndPlayComponent, data: {animation: 'WorkAndPlay'} },
-  { path: 'WorkAndPlay/:workAndPlayName', component: WorkAndPlayDetailsComponent, data:{animation: 'WorkAndPlayDetails'} },
+  { path: 'Projects', component: WorkAndPlayComponent, data: {animation: 'Projects'} },
+  { path: 'Projects/:ProjectsName', component: WorkAndPlayDetailsComponent, data:{animation: 'WorkAndPlayDetails'} },
   { path: 'Contact', component: ContactComponent, data: {animation: 'Contact'} },
 ];
 

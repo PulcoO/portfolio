@@ -1,11 +1,5 @@
 <div class="page" [ngStyle]="{'background-color': this.backgroundColor }">
     <div class="content" >
-        <!-- <button (click)="toggle()">Toggle Open/Closed</button>
-        <div [@.disabled]="isDisabled">
-            <div [@childAnimations]="isOpen ? 'open' : 'closed'" class="open-close-container">
-                <p>The box is now {{ isOpen ? 'Open' : 'Closed' }}!</p>
-            </div>
-        </div> -->
         <section [ngClass]="activeTitleId == 'title-1' ? this.activeTitleClass : this.nonActiveTitleClass" id="titre-1" [@leftRightAnimations]="animation ? 'in' : 'out'">
             <h1>Hello, I'm Mathieu</h1>
             <p>I'm a junior web developer,</p>

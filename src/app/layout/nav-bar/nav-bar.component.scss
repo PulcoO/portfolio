@@ -10,6 +10,12 @@
     z-index: 2;
 }
 
+@media(max-width: 959px){
+    .sideNavContainer{
+        display: none;
+    }
+}
+
 .logo {
     display: flex;
     flex-direction: column;
@@ -85,6 +91,12 @@
     font-size: 1.2rem;
     font-style: bold;
 }
+@media(min-width: 200px) and (max-width:1570px){
+    .container-element .css-text-animation p{
+        font-size : 0.9rem;
+        font-style: bold;
+    }
+}
 
 .css-icon-animation {
     display: flex;
@@ -95,6 +107,12 @@
     height: 30px;
     width: 20%;
     padding: 5px;
+}
+
+@media(min-width: 200px) and (max-width:1370px){
+    .css-icon-animation{
+        display: none;
+    }
 }
 
 .css-icon-animation i {
@@ -157,3 +175,68 @@
     border: 1px solid gray;
     background-color: white;
 }
+
+/************************* Hamburger *******************/
+.hanburgerContainer {
+    background-color: transparent;
+    color: white;
+    font-family: AmaticBold, Arial, Helvetica, sans-serif;
+    letter-spacing: 0.2rem;
+    height: 100vh;
+    position: absolute;
+    box-sizing: border-box;
+    width: 13%;
+    z-index: 2;
+}
+
+  .hamburger {
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 96px;
+    height: 96px;
+    font-size: 0;
+    text-indent: -9999px;
+    z-index: 9999;
+    cursor: pointer;
+    outline: none;
+    background: none;
+    border: 0;
+  }
+
+  @media(min-width: 200px) and (max-width:959px){
+    .hamburger{
+        display: block;
+    }
+}
+   
+  .hamburger span {
+    display: block;
+    position: absolute;
+    top: 44px;
+    left: 18px;
+    right: 18px;
+    height: 4px;
+    background: white;
+  }
+   
+  .hamburger span::before,
+  .hamburger span::after {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: gray;
+    content: "";
+  }
+   
+  .hamburger span::before {
+    top: -20px;
+  }
+   
+  .hamburger span::after {
+    bottom: -20px;
+  }

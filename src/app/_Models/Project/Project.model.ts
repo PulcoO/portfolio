@@ -1,11 +1,11 @@
-import { WorkAndPlayImages } from './WorkAndPlayImage.model';
+import { ProjectImage } from './ProjectImage.model';
 
-export class WorkAndPlay {
+export class Project {
     id: string;
     name: string;
     descriptionMini: string;
     descriptionLong: string;
-    images: WorkAndPlayImages[];
+    images: ProjectImage[];
     githubUrl: string;
     color: string;
 }

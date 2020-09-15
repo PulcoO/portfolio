@@ -13,17 +13,17 @@ import {pageAnimations, titleAnimations} from './home-animations'
 
 export class HomeComponent implements OnInit {
   @HostBinding('@pageAnimations')
-animation = true;
-timer;
+public animation : boolean = true;
+public timer : any;
 
-maxTitleInt: number = 6;
-activePointClass: string = "fas fa-circle fa-lg";
-nonActivePointClass: string = "far fa-circle fa-lg";
-activePointId: string = "circle-point-1";
+public maxTitleInt: number = 6;
+public activePointClass: string = "fas fa-circle fa-lg";
+public nonActivePointClass: string = "far fa-circle fa-lg";
+public activePointId: string = "circle-point-1";
 
-activeTitleClass: string = "title";
-nonActiveTitleClass: string = "title hidden";
-activeTitleId: string = "title-1";
+public activeTitleClass: string = "title";
+public nonActiveTitleClass: string = "title hidden";
+public activeTitleId: string = "title-1";
 
 backgroundColor: string = "#FAC20B"
 backgroundColorArray = ["#FAC20B","#02C9C9","#E9A1B9","#333333","#C2D53F","#E8A0B8"];
@@ -31,29 +31,23 @@ backgroundColorArray = ["#FAC20B","#02C9C9","#E9A1B9","#333333","#C2D53F","#E8A0
   constructor() { }
 
   ngOnInit() {
-  //Lanch set time for autochangingTitle
-    setTimeout(() =>{
-      this.autoChangeTitle();
-    }, 10000);
-
+    this.changeTitleInterval();
   }
 
-  autoChangeTitle()
+  changeTitleInterval()
   {
       this.timer = setInterval(() =>{
         this.incrementId(this.activePointId);
       }, 10000);
-  console.log(this.timer);
   }
 
   incrementId(id: string)
   {
     let idNum = parseInt(id.split('-')[2]);
     if (idNum && Number(idNum)){
-      idNum = idNum%this.maxTitleInt + 1
-      this.activePointId = 'circle-point-' + idNum
-      console.log (this.activePointId)
-      this.changeTitle(this.activePointId)
+      idNum = idNum%this.maxTitleInt + 1;
+      this.activePointId = 'circle-point-' + idNum;
+      this.changeTitle(this.activePointId);
     }else{
       return console.log('error');
     }
@@ -63,20 +57,20 @@ backgroundColorArray = ["#FAC20B","#02C9C9","#E9A1B9","#333333","#C2D53F","#E8A0
   addActiveOnClick($event) {
     clearInterval(this.timer);
     this.timer = 0;
-    this.autoChangeTitle();
+    this.changeTitleInterval();
     if ($event.target.id == this.activePointId){
       return;
     }else{
-      this.activePointId = $event.target.id
+      this.activePointId = $event.target.id;
     }
-    this.changeTitle($event.target.id)
+    this.changeTitle($event.target.id);
   }
   
   changeTitle(id: string){
     let idNum = parseInt(id.split('-')[2]);
     if (idNum && Number(idNum)){
       this.activeTitleId = "title-"+ idNum;
-      this.backgroundColor = this.backgroundColorArray[idNum-1]
+      this.backgroundColor = this.backgroundColorArray[idNum-1];
       this.animation = !this.animation;
     }
   }

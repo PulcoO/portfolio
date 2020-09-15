@@ -2,9 +2,13 @@ import { Component, HostBinding, OnInit } from '@angular/core';
 import { pageAnimations } from './work-and-play-animations';
 
 // MODELS
-import { WorkAndPlay } from '../models/WorkAndPlay/WorkAndPlay.model';
+import { Project } from '../../_Models/Project/Project.model';
 // SERVICES
-import { WorkAndPlayService } from '../services/workAndPlay/work-and-play.service';
+import { ProjectService } from '../../_Services/Project/Project.service';
+
+// RELATIVE PATH => SEE TSCONFIG.JSON // refuse de fonctionner ! fuck
+//import { Project } from '@models/Projects/Projects.model';
+//import { ProjectService } from '@services/Project/Project.service'
 
 @Component({
   selector: 'app-work-and-play',
@@ -16,13 +20,11 @@ export class WorkAndPlayComponent implements OnInit {
   @HostBinding('@pageAnimations')
   animatePage = true;
   
-  private works : WorkAndPlay[];
-
-  
+  public _projects : Project[];
 
 
   constructor(
-    private workService : WorkAndPlayService
+    private _projectService : ProjectService
   ) { }
 
   ngOnInit() {
@@ -31,8 +33,8 @@ export class WorkAndPlayComponent implements OnInit {
   }
 
   getWorks(): void {
-    this.workService.getWorks()
-        .subscribe(works => this.works= works);
+    this._projectService.getProjects()
+        .subscribe(projects => this._projects= projects);
   }
 
 }

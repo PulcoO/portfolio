@@ -1,4 +1,6 @@
-export const workAndPlayArray =
+import { Project } from '../_Models/Project/Project.model';
+
+export const PROJECTS : Project[] =
 [
     {
       id : "workAndPlay-1",

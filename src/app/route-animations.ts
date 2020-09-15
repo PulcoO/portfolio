@@ -11,7 +11,7 @@ import {
  
  export const slideInAnimation =
     trigger('routeAnimations', [
-        transition('Home => About, Home => Skills, Home => Contact, Home => WorkAndPlay, About => Skills, About => WorkAndPlay, About => Contact, Skills => WorkAndPlay, Skills => Contact, WorkAndPlay => Contact',  [
+        transition('Home => About, Home => Skills, Home => Contact, Home => Projects, About => Skills, About => Projects, About => Contact, Skills => Projects, Skills => Contact, Projects => Contact',  [
             style({ position: 'relative' }),
             query(':enter, :leave', [
                 style({
@@ -33,7 +33,7 @@ import {
             ]),
             query(':enter', animateChild()),
         ]),
-        transition('About => Home, Skills => About, Skills => Home, WorkAndPlay => Skills, WorkAndPlay => About, WorkAndPlay => Home,  Contact => WorkAndPlay, Contact => Skills, Contact => About, Contact => Home',  [
+        transition('About => Home, Skills => About, Skills => Home, Projects => Skills, Projects => About, Projects => Home,  Contact => Projects, Contact => Skills, Contact => About, Contact => Home',  [
             style({ position: 'relative' }),
             query(':enter, :leave', [
                 style({
@@ -55,7 +55,7 @@ import {
             ]),
             query(':enter', animateChild()),
         ]),
-        transition('WorkAndPlay <=> WorkAndPlayDetails',  [
+        transition('Projects <=> ProjectsDetails',  [
             style({ position: 'relative' }),
             query(':enter, :leave', [
                 style({
