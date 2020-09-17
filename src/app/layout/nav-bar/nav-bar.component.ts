@@ -22,9 +22,16 @@ export class NavBarComponent implements OnInit {
 
   public menuState:string = 'out';
 
+  public burgerState:boolean = false;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  toggleBurgerNav(){
+    this.burgerState = !this.burgerState;
+    this.toggleMenu();
   }
 
   toggleMenu(){

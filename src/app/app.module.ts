@@ -20,6 +20,9 @@ import { WorkAndPlayDetailsComponent } from './Components/projectDetails/work-an
 
 import { ReadMoreBtnComponent } from './layout/buttons/read-more-btn/read-more-btn.component';
 import { MenuComponent } from './layout/menu/menu.component';
+import { CoreComponent } from './Components/core/core.component';
+import { LoveComponent } from './Components/love/love.component';
+import { WorkComponent } from './Components/work/work.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +39,9 @@ import { MenuComponent } from './layout/menu/menu.component';
     ReadMoreBtnComponent,
     SidebarDirective,
     MenuComponent,
+    CoreComponent,
+    LoveComponent,
+    WorkComponent,
   ],
   imports: [
     BrowserModule,

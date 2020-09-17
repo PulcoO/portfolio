@@ -1,10 +1,32 @@
-<div class="hamburgerContainer">
+<!-- <div class="hamburgerContainer">
     <button (click)="toggleMenu()" class="hamburger">
         <span>toggle menu</span>
     </button>
+</div> -->
+<div id="nav-burger" (click)="toggleBurgerNav()"
+    [ngClass]="burgerState ? 'open' : 'close'" >
+    <span></span>
+    <span></span>
+    <span></span>
 </div>
-<app-menu [@slideInOut]="menuState" ></app-menu>
-
+<div [@slideInOut]="menuState" class="nav-burger_Container">
+    <div class="container-element" (click)="toggleBurgerNav()" [routerLink]="['/Home']" routerLinkActive="active" [routerLinkActive]="['activeLink', 'nonActiveLink']">
+        <p class="container-text ">Home</p>
+    </div>
+    <div class="container-element " (click)="toggleBurgerNav()" [routerLink]="['/About']" routerLinkActive="active" [routerLinkActive]="[ 'activeLink', 'nonActiveLink']">
+        <p class="container-text">About</p>
+    </div>
+    <div class="container-element" (click)="toggleBurgerNav()" [routerLink]="['/Skills']" routerLinkActive="active" [routerLinkActive]="['activeLink', 'nonActiveLink']">
+            <p class="container-text">Skills</p>
+    </div>
+    <div class="container-element" (click)="toggleBurgerNav()" [routerLink]="['/Projects']" routerLinkActive="active" [routerLinkActive]="[ 'activeLink', 'nonActiveLink']">
+        <p class="container-text">Work & Play</p>
+    </div>
+    <div class="container-element" (click)="toggleBurgerNav()" [routerLink]="['/Contact']" routerLinkActive="active" [routerLinkActive]="['activeLink', 'nonActiveLink']">
+        <p class="container-text ">Contact</p>
+    </div>
+</div>
+<!-- <app-menu [@slideInOut]="menuState" ></app-menu> -->
 
 <div class="sideNavContainer">
     <div class="navbar-user">
