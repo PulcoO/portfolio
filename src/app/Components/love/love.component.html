@@ -3,6 +3,9 @@
         <h1>WHAT I LOVE</h1>
     </div>
     <div class="content">
+        <div id="buttons_close__container">
+            <a class="cancel" [routerLink]="['/About']"><app-cancel-button></app-cancel-button></a>
+        </div>
         <div class="carousel-wrapper">  
             <div class="carousel noanimate" >
                 <div class="slide" id="{{love.imageName}}" *ngFor ="let love of loveArray">
@@ -14,8 +17,10 @@
             <h3></h3>
         </div>
         <nav class="carousel-nav">
-            <button class="prev">Previous</button>
-            <button class="next">Next</button>
+            <div id="buttons_next_prev__container">
+                <button class="next"><app-left-arrow-button></app-left-arrow-button></button>
+                <button class="prev"><app-right-arrow-button></app-right-arrow-button></button>
+            </div>
         </nav>
     </div>
 </div>

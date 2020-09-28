@@ -30,6 +30,19 @@
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+    #buttons_close__container{
+      height: 50px;
+      width: 50%;
+      position: relative;
+      display: flex;
+      justify-content: flex-end;
+      a{
+        border: none;
+        background-color: transparent;
+        outline:none;
+      }
+    }
+
 }
   
   .carousel-wrapper {
@@ -43,7 +56,6 @@
     background-color: transparent;
     display: -webkit-box;
     display: -moz-box;
-    display: box;
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flexbox;
@@ -108,8 +120,18 @@
     -moz-justify-content: space-between;
     -ms-justify-content: space-between;
     -o-justify-content: space-between;
-    justify-content: space-between;
+    justify-content: center;
     -ms-flex-pack: justify;
+    #buttons_next_prev__container{
+      width: 10%;
+      display: flex;
+      justify-content: space-between;
+      button{
+        border: none;
+        background-color: transparent;
+        outline:none;
+      }
+    }
   }
   
   p {

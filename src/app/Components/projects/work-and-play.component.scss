@@ -103,7 +103,7 @@
 
 .grid figure p {
 	letter-spacing: 1px;
-	font-size: 68.5%;
+	font-size: 78.5%;
 }
 
 
@@ -115,7 +115,8 @@
 /*---------------*/
 
 .card {
-    margin: 10px;
+	margin: 10px;
+	height: 250px;
 }
 
 figure.effect-ming {
@@ -192,77 +193,3 @@ figure.effect-ming:hover img {
 		width: 100%;
 	}
 }
-
-
-// @media screen and (max-width: 800px) {
-//     .project_content {
-//         grid-template-columns: repeat(1, 1fr);
-//     }
-//   }
-// .project_content-hidden{
-//     display: none;
-// }
-
-// .card {
-//     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 0px 0px 0 rgba(0, 0, 0, 0.19);
-//     display: block;
-//     background-color: #FFFFFF;
-//     height: 220px;
-//     width: 190px;
-//     padding: 1.5%;
-//     margin: 1%;
-//     cursor: pointer;
-// }
-
-// .card:hover>.card-content>.card-footer>.btn-read-more{
-//     color: #FAC20B;
-//     background-color:white;
-// }
-
-// .card-content {
-//     width: 100%;
-//     height: 100%;
-//     display: flex;
-//     flex-flow: column nowrap;
-//     justify-content: space-between;
-// }
-
-// .card-image {
-//     //box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-// }
-
-// .card-image img {
-//     display: block;
-//     margin-left: auto;
-//     margin-right: auto;
-//     width: 100%;
-// }
-
-// .card-header h3 {
-//     margin-bottom: 10px;
-// }
-
-// .card-description p {
-//     margin: 0px;
-// }
-
-// .card-footer{
-//     position: relative;
-//     bottom: 0;
-//     background-color: transparent;
-//     width: 100%;
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: flex-end;
-//     box-sizing: border-box;
-//     color: gray;
-//     padding: 1%;
-//     margin-bottom: 1px;
-//     font-size: 1.2rem;
-// }
-
-// .card-footer .btn-read-more{
-//     background-color: white;
-//     transition: 0.5s;
-//     color: gray;
-// }

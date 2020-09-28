@@ -23,6 +23,10 @@ import { MenuComponent } from './layout/menu/menu.component';
 import { CoreComponent } from './Components/core/core.component';
 import { LoveComponent } from './Components/love/love.component';
 import { WorkComponent } from './Components/work/work.component';
+import { LeftArrowButtonComponent } from './layout/buttons/left-arrow-button/left-arrow-button.component';
+import { RightArrowButtonComponent } from './layout/buttons/right-arrow-button/right-arrow-button.component';
+import { CancelButtonComponent } from './layout/buttons/cancel-button/cancel-button.component';
+import { ChangeCloseClassDirective } from './_Directives/change-close-class.directive';
 
 @NgModule({
   declarations: [
@@ -42,6 +46,10 @@ import { WorkComponent } from './Components/work/work.component';
     CoreComponent,
     LoveComponent,
     WorkComponent,
+    LeftArrowButtonComponent,
+    RightArrowButtonComponent,
+    CancelButtonComponent,
+    ChangeCloseClassDirective,
   ],
   imports: [
     BrowserModule,
