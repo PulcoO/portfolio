@@ -1,0 +1,118 @@
+.page {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-family: Amatic, Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    background-color: #E8A0B8;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    #sectionTitle{
+        position: absolute;
+        top:10%;
+        h1{
+            font-weight: bold;
+            font-size: 70px;
+            letter-spacing: 0.8rem;
+        }
+    }
+}
+
+.content {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+  
+  .carousel-wrapper {
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,0.3) 15%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0) 85%);
+    margin: 0rem auto 1rem;
+    width: 30vw;
+  }
+  
+  .carousel {
+    background-color: transparent;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transition: margin-left 600ms ease-in-out;
+    -moz-transition: margin-left 600ms ease-in-out;
+    transition: margin-left 600ms ease-in-out;
+    width: 100%;
+    margin-left: calc( 2 * (30vw / 3 - (30vw * 0.25 + 2 * 8px)) + 30vw / -3 + (30vw * 0.25 + 2 * 8px) / -1 );
+  }
+
+  .carousel.noanimate {
+    -webkit-transition: margin-left 0ms ease-in-out;
+    -moz-transition: margin-left 0ms ease-in-out;
+    transition: margin-left 0ms ease-in-out;
+  }
+  
+  .slide {
+    opacity:0;
+    transition: opacity 1.5s;
+    font-size: 3.125rem;
+    font-weight: 700;
+    text-align: center;
+    background: transparent;
+    margin: 1rem 0.5rem;
+    padding: 3.75rem 0;
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0;
+    box-flex: 0;
+    -webkit-flex: 0 0 25%;
+    -moz-flex: 0 0 25%;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+    //cadrer l'image
+    height: 70px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img{
+        height: 70px;
+        width: 70px;
+    }
+  }
+  
+  .carousel-nav {
+    margin: 0 auto 1rem;
+    width: 50vw;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+    -ms-flex-pack: justify;
+  }
+  
+  p {
+    margin: 1.125rem auto;
+    width: 70vw;
+  }

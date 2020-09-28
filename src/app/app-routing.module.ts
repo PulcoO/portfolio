@@ -7,12 +7,18 @@ import { SkillsComponent } from './Components/skills/skills.component';
 import { WorkAndPlayComponent } from './Components/projects/work-and-play.component';
 import { HomeComponent } from './Components/home/home.component';
 import { WorkAndPlayDetailsComponent } from './Components/projectDetails/work-and-play-details.component';
+import { CoreComponent } from './Components/core/core.component';
+import { LoveComponent } from './Components/love/love.component';
+import { WorkComponent } from './Components/work/work.component';
 
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/Home' },
   { path: 'Home', component: HomeComponent, data: {animation: 'Home'} },
   { path: 'About', component: AboutComponent, data: {animation: 'About'} },
+  { path: 'About/Core', component: CoreComponent },
+  { path: 'About/Love', component: LoveComponent },
+  { path: 'About/Work', component: WorkComponent },
   { path: 'Skills', component: SkillsComponent , data: {animation: 'Skills'} },
   { path: 'Projects', component: WorkAndPlayComponent, data: {animation: 'Projects'} },
   { path: 'Projects/:ProjectsName', component: WorkAndPlayDetailsComponent, data:{animation: 'WorkAndPlayDetails'} },

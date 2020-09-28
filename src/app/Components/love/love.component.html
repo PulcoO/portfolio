@@ -1,1 +1,21 @@
-<p>love works!</p>
+<div class="page">
+    <div id="sectionTitle">
+        <h1>WHAT I LOVE</h1>
+    </div>
+    <div class="content">
+        <div class="carousel-wrapper">  
+            <div class="carousel noanimate" >
+                <div class="slide" id="{{love.imageName}}" *ngFor ="let love of loveArray">
+                    <img src="{{imagesPathR + love.imageName + '.' + love.imageType}}" alt="">
+                </div>
+            </div>
+        </div>
+        <div id="loveStatement">
+            <h3></h3>
+        </div>
+        <nav class="carousel-nav">
+            <button class="prev">Previous</button>
+            <button class="next">Next</button>
+        </nav>
+    </div>
+</div>
