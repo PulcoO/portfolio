@@ -27,6 +27,14 @@ import { LeftArrowButtonComponent } from './layout/buttons/left-arrow-button/lef
 import { RightArrowButtonComponent } from './layout/buttons/right-arrow-button/right-arrow-button.component';
 import { CancelButtonComponent } from './layout/buttons/cancel-button/cancel-button.component';
 import { ChangeCloseClassDirective } from './_Directives/change-close-class.directive';
+import { CodePenComponent } from './layout/social_media_buttons/code-pen/code-pen.component';
+import { FacebookComponent } from './layout/social_media_buttons/facebook/facebook.component';
+import { LinkedinComponent } from './layout/social_media_buttons/linkedin/linkedin.component';
+import { GithubComponent } from './layout/social_media_buttons/github/github.component';
+import { Site1Component } from './layout/social_media_buttons/site1/site1.component';
+import { Site2Component } from './layout/social_media_buttons/site2/site2.component';
+import { Site3Component } from './layout/social_media_buttons/site3/site3.component';
+import { OpenfooterComponent } from './layout/social_media_buttons/openfooter/openfooter.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +58,14 @@ import { ChangeCloseClassDirective } from './_Directives/change-close-class.dire
     RightArrowButtonComponent,
     CancelButtonComponent,
     ChangeCloseClassDirective,
+    CodePenComponent,
+    FacebookComponent,
+    LinkedinComponent,
+    GithubComponent,
+    Site1Component,
+    Site2Component,
+    Site3Component,
+    OpenfooterComponent,
   ],
   imports: [
     BrowserModule,

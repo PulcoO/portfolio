@@ -1,12 +1,13 @@
 <div [ngClass]="footerVisibility ? this.footerClassActive : this.footerClassInactive">
-    <a href=""><i class="fab fa-github fa-xl"></i></a>
-    <a href=""><i class="fab fa-codepen fa-xl"></i></a>
-    <a href=""><i class="fab fa-facebook fa-xl"></i></a>
-    <a href=""><i class="fab fa-linkedin-in fa-xl"></i></a>
-    <a href=""><i class="fas fa-at fa-xl"></i></a>
+    <app-github></app-github>
+    <app-linkedin></app-linkedin>
+    <app-code-pen></app-code-pen>
+    <app-facebook></app-facebook>
+    <app-site1></app-site1>
 </div>
-<div>
-<i [ngClass]="footerVisibility ? this.btnFooterClassArrowDown : this.btnFooterClassInfo" (click)="footerBtnInfoClick()"></i>
+
+<div class="social_media social_media__info">
+    <i [ngClass]="footerVisibility ? this.btnFooterClassArrowDown : this.btnFooterClassInfo" (click)="footerBtnInfoClick()"></i>
 </div>
 
 

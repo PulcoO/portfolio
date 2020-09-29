@@ -15,8 +15,6 @@ export class ContactComponent implements OnInit {
   @HostListener('click', ['$event.target'])
   onClick(target){
     let item = this.el.nativeElement.querySelector('li');
-
-    alert(item);
   }
 
 }

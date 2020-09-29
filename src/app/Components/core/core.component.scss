@@ -1,3 +1,6 @@
+$duration:25s;
+$ease:ease-in-out;
+
 .page {
     margin: 0;
     padding: 0;
@@ -7,3 +10,86 @@
     height: 100vh;
     width: 100%;
 }
+
+.content {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    color: white;
+    #core_container{
+        display: flex;
+        flex-direction: row nowrap;
+        .core_text__container{
+            height: 500px;
+            width: 500px;
+            background-color: transparent;
+            padding: 30px;
+            .core_text__card{
+                .card__body{
+                    p{
+                        font-size: 1.2rem;
+                        letter-spacing: 0.1rem;
+                    }
+                    
+                }
+                .card__bottom{
+                    display: flex;
+                    flex-flow: row nowrap;
+                }
+                .card__top{
+                    display: flex;
+                    flex-flow: column nowrap;
+                    justify-content: space-between;
+                    h1{
+                        text-transform: uppercase;
+                        font-weight: bold;
+                        font-size: 5em;
+                        letter-spacing: 0.6rem;
+                    }
+                }
+            }
+        }
+        .holder{
+            width:500px;
+            height: 250px;
+            position: relative;
+            .circle{
+                border-radius:100% 100% 0 0;
+                position: absolute;
+                bottom: 0;
+                left:50%;
+                transform:translateX(-50%);
+                transform-origin:bottom center;
+            }
+            @for $i from 1 through 16{
+                .circle:nth-child(#{$i}){
+                    $size:0;
+                    @if($i > 1){
+                        $size:31px * ($i - 1);
+                        border:13px solid white;
+                    }@else{
+                        $size:25px;
+                        background:transparent;
+                    }
+                    border-bottom:none;
+                    border-radius:$size $size 0 0;
+                    width:$size;
+                    height:$size / 2;
+                    z-index: 16 - $i;
+                    animation: circle-#{$i} $duration infinite $ease;
+                }
+                @keyframes circle-#{$i}{
+                    0%{transform:translateX(-50%) rotate(0deg);}
+                    100%{transform:translateX(-50%) rotate(-($i * 360deg));}
+                }
+            }
+        }
+    }
+}
+
+
+
+

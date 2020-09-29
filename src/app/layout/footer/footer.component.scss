@@ -1,5 +1,5 @@
 .footer{
-    height: 45px;
+    height: 60px;
     padding: 5px 55px 5px 5px;
     display: flex;
     flex-direction: row;
@@ -20,29 +20,17 @@
     transition: 0.5s;
     
 }
-.footer a {
-    color: white;
-}
-.footer a i {
-    padding: 3px;
-    margin-left: 15px;
-    border-radius: 50%;
-    transition: 0.5s;
-}
-
-.footer a i:hover {
-    color: gray;
-    background-color: white;
-    border-radius: 50%;
-}
-
 .btn-information{
     position: absolute;
-    right: 20px;
-    bottom : 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 60px;
+    right: 0px;
+    bottom : 0px;
     transition: 0.7s;
 }
-
 .btn-information:hover{
     color: grey;
     transform: scale(1.2);
