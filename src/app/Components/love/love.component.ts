@@ -8,7 +8,7 @@ declare var $ :any;
 })
 export class LoveComponent implements OnInit {
 
-public imagesPathR = "./../../../assets/images/";
+public imagesPathR = "./assets/images/";
 public loveArray : any = [
   {
     imageName : "LoveGameOfThrone",
