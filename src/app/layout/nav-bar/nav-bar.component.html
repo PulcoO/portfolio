@@ -1,8 +1,3 @@
-<!-- <div class="hamburgerContainer">
-    <button (click)="toggleMenu()" class="hamburger">
-        <span>toggle menu</span>
-    </button>
-</div> -->
 <div id="nav-burger" (click)="toggleBurgerNav()"
     [ngClass]="burgerState ? 'open' : 'close'" >
     <span></span>
@@ -17,7 +12,7 @@
         <p class="container-text">About</p>
     </div>
     <div class="container-element" (click)="toggleBurgerNav()" [routerLink]="['/Skills']" routerLinkActive="active" [routerLinkActive]="['activeLink', 'nonActiveLink']">
-            <p class="container-text">Skills</p>
+        <p class="container-text">Skills</p>
     </div>
     <div class="container-element" (click)="toggleBurgerNav()" [routerLink]="['/Projects']" routerLinkActive="active" [routerLinkActive]="[ 'activeLink', 'nonActiveLink']">
         <p class="container-text">Work & Play</p>
@@ -26,7 +21,6 @@
         <p class="container-text ">Contact</p>
     </div>
 </div>
-<!-- <app-menu [@slideInOut]="menuState" ></app-menu> -->
 
 <div class="sideNavContainer">
     <div class="navbar-user">
