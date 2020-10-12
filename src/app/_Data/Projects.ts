@@ -9,26 +9,25 @@ export const PROJECTS : Project[] =
       descriptionLong : "jfghdzekjfhikudshfhkjdshkfhkdshjkfhjkdhsjkfhjkdshjkfhjkdsh",
       images : [
         {
+          //le nom du document est name + "-" + id + "." + format
+          //name lower case & space remplace by -
           id : "1",
-          src : "../../assets/work&play-card/foglie-tropicali-fiori-colorati-su-fogliame-tropicale-scuro-sfondo-natura-fogliame-verde-scuro_34998-128.jpg",
+          name: "bio-connect",
+          format : "png",
           alt : "Bio'Connect first image"
         },
         {
           id : "2",
-          src : "../../assets/work&play-card/foglie-tropicali-fiori-colorati-su-fogliame-tropicale-scuro-sfondo-natura-fogliame-verde-scuro_34998-128.jpg",
+          name: "bio-connect",
+          format : "png",
           alt : "Bio'Connect first image"
         },
         {
           id : "3",
-          src : "../../assets/work&play-card/tendances-design-site-web-responsive-design.png",
+          name: "bio-connect",
+          format : "png",
           alt : "Bio'Connect first image"
-        },
-        {
-          id : "4",
-          src : "../../assets/work&play-card/tendances-design-site-web-responsive-design.png",
-          alt : "Bio'Connect first image"
-        },
-
+        }
       ],
     githubUrl : "url exemple",
     color : "#C2D53F"
@@ -40,23 +39,35 @@ export const PROJECTS : Project[] =
       descriptionLong : "jfghdzekjfhikudshfhkjdshkfhkdshjkfhjkdhsjkfhjkdshjkfhjkdsh",
       images : [
         {
+          //le nom du document est name + "-" + id + "." + format
+          //name lower case & space remplace by -
           id : "1",
-          src : "../../assets/work&play-card/tendances-design-site-web-responsive-design.png",
+          name: "piggy-banks",
+          format : "png",
           alt : "Bio'Connect first image"
         },
         {
           id : "2",
-          src : "../../assets/work&play-card/tendances-design-site-web-responsive-design.png",
+          name: "piggy-banks",
+          format : "png",
           alt : "Bio'Connect first image"
         },
         {
           id : "3",
-          src : "../../assets/work&play-card/tendances-design-site-web-responsive-design.png",
+          name: "piggy-banks",
+          format : "png",
           alt : "Bio'Connect first image"
         },
         {
           id : "4",
-          src : "../../assets/work&play-card/tendances-design-site-web-responsive-design.png",
+          name: "piggy-banks",
+          format : "png",
+          alt : "Bio'Connect first image"
+        },
+        {
+          id : "5",
+          name: "piggy-banks",
+          format : "png",
           alt : "Bio'Connect first image"
         },
 

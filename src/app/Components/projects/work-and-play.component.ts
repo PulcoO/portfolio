@@ -6,9 +6,6 @@ import { Project } from '../../_Models/Project/Project.model';
 // SERVICES
 import { ProjectService } from '../../_Services/Project/Project.service';
 
-// RELATIVE PATH => SEE TSCONFIG.JSON // refuse de fonctionner ! fuck
-//import { Project } from '@models/Projects/Projects.model';
-//import { ProjectService } from '@services/Project/Project.service'
 
 @Component({
   selector: 'app-work-and-play',
@@ -19,7 +16,8 @@ import { ProjectService } from '../../_Services/Project/Project.service';
 export class WorkAndPlayComponent implements OnInit {
   @HostBinding('@pageAnimations')
   animatePage = true;
-  
+
+  public imagesPathR = "./assets/projects/";
   public _projects : Project[];
 
 

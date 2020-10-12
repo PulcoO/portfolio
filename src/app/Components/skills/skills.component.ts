@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Planet } from '~app/_Models/Planet.model';
+import { PlanetService } from '~app/_Services/Planet/planet.service';
 declare var $ :any;
 
 @Component({
@@ -8,9 +10,17 @@ declare var $ :any;
 })
 export class SkillsComponent implements OnInit {
 
-  constructor() { }
+  public planets : Planet[];
+  @ViewChild('solarSystem') solarSystem:ElementRef; 
+
+  constructor(
+    private _planetService : PlanetService,
+    private el:ElementRef 
+  ) { }
 
   ngOnInit() {
+    this.getPlanets()
+    console.log(this.planets)
 
       var body = $(".page_content"),
           universe = $("#universe"),
@@ -30,29 +40,27 @@ export class SkillsComponent implements OnInit {
         e.preventDefault();
       });
     
-      // $("#toggle-controls").click(function(e) {
-      //   body.toggleClass("controls-open controls-close");
-      //   e.preventDefault();
-      // });
-    
       $("#data a").hover(function(e) {
         var ref = $(this).attr("class");
+        console.log(ref)
         solarsys.removeClass().addClass(ref);
+        var solarRed = solarsys
+        console.log(solarRed);
         $(this).parent().find('a').removeClass('active');
         $(this).addClass('active');
         e.preventDefault();
       });
-      $("#data a").click(function(e) {
-        e.preventDefault();
-      });
-    
-      // $(".set-view").click(function() { body.toggleClass("view-3D view-2D"); });
-      // $(".set-zoom").click(function() { body.toggleClass("zoom-large zoom-close"); });
-      // $(".set-speed").click(function() { setView("scale-stretched set-speed"); });
-      // $(".set-size").click(function() { setView("scale-s set-size"); });
-      // $(".set-distance").click(function() { setView("scale-d set-distance"); });
     
       init();
+  }
+  ngAfterViewInit() {
+    console.log(this.solarSystem.nativeElement);
+  }
+
+  private getPlanets()
+  {
+    this._planetService.getPlanets()
+      .subscribe(planets => this.planets = planets)
   }
 
   

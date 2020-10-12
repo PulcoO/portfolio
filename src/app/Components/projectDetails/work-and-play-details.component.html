@@ -1,74 +1,190 @@
-<div class="page"[ngStyle]="{'background-color': this.backgroundColor }">
-    <section class="work-and-play-details-content" >
-        <div class="background-absolute"></div>
-        <div class="navbar topBar">
-
-        </div>
-        <div class="navBar leftBar">
-            <div class="navBarIcone">
-                <app-left-arrow-button></app-left-arrow-button>
-            </div>
-            <p>{{workDetailIndex}} / {{workLength}}</p>
-        </div>
-        <div class="navBar rightBar">
-            <div class="navBarIcone">
-                <app-right-arrow-button></app-right-arrow-button>
-            </div>
-            <p>{{workDetailIndex}} / {{workLength}}</p>
-        </div>
-        
-        <div class="content">
-            <div class="carousel">
-                <div class="carousel-container">
-                    <div class="carousel-image-principal">
-                        
-                        <img src="{{this.workImage.src}}" id="image-{{this.workImage.id}}" alt="{{this.workImage.alt}}">
-                        
-                        <div class="image-principal-footer">
-                            <i class="far fa-arrow-alt-circle-left" appChangeArrowClass ></i>
-                            <div class="compteur-container">
-                                <p class="compteur">{{this.workImageIndex + 1}} / {{this.workImageLength}}</p>
-                            </div>
-                            
-                            <i class="far fa-arrow-alt-circle-right" appChangeArrowClass ></i>
-                        </div>
-                    </div>
-                    <div class="carouseul-miniatures-list" >
-                        <div class="miniature-container" *ngFor="let miniatures of this.workDetail.images" (click)="changePrincipalImage($event.originalTarget.id)">
-                            <img class="miniature" id="image-{{miniatures.id}}" src="{{miniatures.src}}" alt="{{miniatures.alt}}"  >
-                        </div>
-                    </div>
-                </div>
-            </div>
-                
+<div class="page" [ngStyle]="{'background-color': project.color }">
+  <section class="project-details-content">
+    <div class="masonry-container">
+  
+      <div class="panel">
+		<div class="panel-wrapper">
+			<div class="panel-overlay">
+				<div class="panel-text">
+					<div class="panel-title">Crashing Waves</div>
+					<div class="panel-tags">
+						<span class="tag-icon"><img class="tag-icon-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/tag-icon.svg" alt=""/></span>
+						<span class="tags-list">Landscapes, Waves, Beach</span>
+					</div>
+				</div>
+				<img class="panel-gradient" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/base-gradient.png" alt=""/>
+				<img class="panel-vingette" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/darken-gradient.png" alt=""/>
+			</div>
+			<img class="panel-img" [src]="image2" alt=""/>
+		</div>
+  </div>
+  
+	<div class="panel">
+	<div class="panel-wrapper">
+			<div class="panel-overlay">
+				<div class="panel-text">
+					<div class="panel-title">Blue Docks</div>
+					<div class="panel-tags">
+						<span class="tag-icon"><img class="tag-icon-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/tag-icon.svg" alt=""/></span>
+						<span class="tags-list">Docks, Sunset, Horizon</span>
+					</div>
+				</div>
+				<img class="panel-gradient" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/base-gradient.png" alt=""/>
+				<img class="panel-vingette" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/darken-gradient.png" alt=""/>
+			</div>
+			<img class="panel-img" [src]="image1" alt=""/>
+    </div>
+  </div>
     
-            <div class="card">
-                <div class="card-header">
-                    <div class="horizontal-line" [ngStyle]="{'background-color': this.backgroundColor }"></div>
-                    <div class="header-text">
-                        <h1 >{{this.workDetail.name}}</h1>
-                    </div>
-                    
-                </div>
-                <div class="card-description-container">
-                    <h5>About</h5>
-                    <div class="card-description">
-                        <p class="description-text">{{this.workDetail.descriptionLong}} Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates quisquam, adipisci, maxime eius ipsa beatae nulla eligendi voluptatum, autem dignissimos ex omnis natus. Harum, nam sit quia facilis est eveniet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe provident incidunt, maiores qui iusto modi asperiores numquam molestiae laboriosam nobis optio natus obcaecati sapiente blanditiis doloribus voluptate ex corrupti ipsum? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque eveniet modi vel quod enim, incidunt odio at rerum. Placeat officiis minus consequatur laudantium atque dolor non sequi quas accusantium voluptates? </p>
-                    </div>
-                </div>
-                <div class="card-footer">
-                    <div class="vertical-line" [ngStyle]="{'background-color': this.backgroundColor }"></div>
-                    <div class="tech-description-container">
-                        <h3>Front</h3>
-                        <h3>Back</h3>
-                        <h3>Serveur</h3>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        
-        
-        
-    </section>
+	<div class="panel">
+			<div class="panel-wrapper">
+				<div class="panel-overlay">
+				<div class="panel-text">
+					<div class="panel-title">Pastel Canyons</div>
+					<div class="panel-tags">
+						<span class="tag-icon"><img class="tag-icon-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/tag-icon.svg" alt=""/></span>
+						<span class="tags-list">Canyon, Rock formations</span>
+					</div>
+				</div>
+				<img class="panel-gradient" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/base-gradient.png" alt=""/>
+				<img class="panel-vingette" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/darken-gradient.png" alt=""/>
+			</div>
+			<img class="panel-img" [src]="image4" alt=""/>
+		</div>
+	</div>
+	<div class="panel">
+		<div class="panel-wrapper">
+			<div class="panel-overlay">
+				<div class="panel-text">
+					<div class="panel-title">Pink Mountain Sunset</div>
+					<div class="panel-tags">
+						<span class="tag-icon"><img class="tag-icon-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/tag-icon.svg" alt=""/></span>
+						<span class="tags-list">Landscapes, Sunset, Mountains</span>
+					</div>
+				</div>
+				<img class="panel-gradient" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/base-gradient.png" alt=""/>
+				<img class="panel-vingette" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/darken-gradient.png" alt=""/>
+			</div>
+			<img class="panel-img" [src]="image3" alt=""/>
+		</div>
+  </div>
+  
+	<!-- <div class="panel">
+		<div class="panel-wrapper">
+			<div class="panel-overlay">
+				<div class="panel-text">
+					<div class="panel-title">Autumn Pine</div>
+					<div class="panel-tags">
+						<span class="tag-icon"><img class="tag-icon-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/tag-icon.svg" alt=""/></span>
+						<span class="tags-list">Forest, Pines, Mountains</span>
+					</div>
+				</div>
+				<img class="panel-gradient" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/base-gradient.png" alt=""/>
+				<img class="panel-vingette" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/darken-gradient.png" alt=""/>
+			</div>
+			<img class="panel-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/forest.jpg" alt=""/>
+		</div>	
+	</div>
+	
+	<div class="panel">
+		<div class="panel-wrapper">
+			<div class="panel-overlay">
+				<div class="panel-text">
+					<div class="panel-title">Purple Power Poles</div>
+					<div class="panel-tags">
+						<span class="tag-icon"><img class="tag-icon-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/tag-icon.svg" alt=""/></span>
+						<span class="tags-list">Urban, landscape, manmade</span>
+					</div>
+				</div>
+				<img class="panel-gradient" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/base-gradient.png" alt=""/>
+				<img class="panel-vingette" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/darken-gradient.png" alt=""/>
+			</div>
+			<img class="panel-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/power-poles.jpg" alt=""/>
+		</div>
+	</div>
+	<div class="panel">
+		<div class="panel-wrapper">
+			<div class="panel-overlay">
+				<div class="panel-text">
+					<div class="panel-title">Purple Ridges</div>
+					<div class="panel-tags">
+						<span class="tag-icon"><img class="tag-icon-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/tag-icon.svg" alt=""/></span>
+						<span class="tags-list">Mountains, Sunrise, Landscapes</span>
+					</div>
+				</div>
+				<img class="panel-gradient" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/base-gradient.png" alt=""/>
+				<img class="panel-vingette" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/darken-gradient.png" alt=""/>
+			</div>
+			<img class="panel-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/purple-mtn.jpg" alt=""/>
+		</div>
+	</div>
+	
+	<div class="panel">
+		<div class="panel-wrapper">
+			<div class="panel-overlay">
+				<div class="panel-text">
+					<div class="panel-title">Spinning Lights</div>
+					<div class="panel-tags">
+						<span class="tag-icon"><img class="tag-icon-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/tag-icon.svg" alt=""/></span>
+						<span class="tags-list">Carnival, Lights, Nightlife</span>
+					</div>
+				</div>
+				<img class="panel-gradient" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/base-gradient.png" alt=""/>
+				<img class="panel-vingette" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/darken-gradient.png" alt=""/>
+			</div>
+			<img class="panel-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/rides.jpg" alt=""/>
+		</div>	
+	</div>
+	<div class="panel">
+		<div class="panel-wrapper">
+			<div class="panel-overlay">
+				<div class="panel-text">
+					<div class="panel-title">Feather Bokeh</div>
+					<div class="panel-tags">
+						<span class="tag-icon"><img class="tag-icon-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/tag-icon.svg" alt=""/></span>
+						<span class="tags-list">Close-ups, Feather, Bokeh</span>
+					</div>
+				</div>
+				<img class="panel-gradient" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/base-gradient.png" alt=""/>
+				<img class="panel-vingette" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/darken-gradient.png" alt=""/>
+			</div>
+			<img class="panel-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/feather.jpg" alt=""/>
+		</div>
+	</div>
+	
+	<div class="panel">
+		<div class="panel-wrapper">
+			<div class="panel-overlay">
+				<div class="panel-text">
+					<div class="panel-title">Irridescent Bench</div>
+					<div class="panel-tags">
+						<span class="tag-icon"><img class="tag-icon-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/tag-icon.svg" alt=""/></span>
+						<span class="tags-list">Landscapes, Still-Life, Countryside</span>
+					</div>
+				</div>
+				<img class="panel-gradient" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/base-gradient.png" alt=""/>
+				<img class="panel-vingette" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/darken-gradient.png" alt=""/>
+			</div>
+			<img class="panel-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/bench-alt.jpg" alt=""/>
+		</div>
+	</div>
+	<div class="panel">
+		<div class="panel-wrapper">
+			<div class="panel-overlay">
+				<div class="panel-text">
+					<div class="panel-title">Blazing Dandelions</div>
+					<div class="panel-tags">
+						<span class="tag-icon"><img class="tag-icon-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/tag-icon.svg" alt=""/></span>
+						<span class="tags-list">Dandelion, Bokeh, Flora</span>
+					</div>
+				</div>
+				<img class="panel-gradient" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/base-gradient.png" alt=""/>
+				<img class="panel-vingette" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/darken-gradient.png" alt=""/>
+			</div>
+			<img class="panel-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/375042/bokeh-dandelion.jpg" alt=""/>
+		</div>
+	</div> -->
 </div>
+  </section>
+</div>
+

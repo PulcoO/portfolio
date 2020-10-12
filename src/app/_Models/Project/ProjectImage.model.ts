@@ -1,6 +1,7 @@
 export class ProjectImage {
     id: string;
-    src: string;
+    name: string;
+    format : string;
     alt: string;
 }
     

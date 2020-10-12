@@ -3,20 +3,21 @@
         <div id="navbar">
           <h1>SKILLS</h1>
         </div>
-        <div id="data">
-          <a class="sun" title="html_css" href="#sunspeed">HTML / CSS</a>
-          <a class="mercury" title="javascript" href="#mercuryspeed">JAVASCRIPT</a>
-          <a class="venus" title="php" href="#venusspeed">PHP</a>
-          <a class="earth active" title="csharp" href="#earthspeed">C#</a>
-          <a class="mars" title="angular" href="#marsspeed">Angular</a>
-          <a class="jupiter" title="jupiter" href="#jupiterspeed">Node.js</a>
-          <a class="saturn" title="cloud" href="#saturnspeed">Cloud / Azure</a>
-          <a class="uranus" title="agile" href="#uranusspeed">Agile</a>
-          <a class="neptune" title="neptune" href="#neptunespeed">Neptune</a>
+        <div id="data" >
+          <!-- <a *ngFor="let planet of planets" [ngClass]="planet.planet == 'earth' ? 'active ' + planet.planet  : planet.planet " appPlanetOver [routerLink]="['/Planet', planet.id]" title="{{planet.name}}">{{planet.name}}</a> -->
+          <a class="sun" [routerLink]="['/Planet', 'htmlcss']" title="html_css">HTML / CSS</a>
+          <a class="mercury" [routerLink]="['/Planet', 'javascript']" title="javascript">JAVASCRIPT</a>
+          <a class="venus" [routerLink]="['/Planet', 'php']" title="php">PHP</a>
+          <a class="earth active" [routerLink]="['/Planet', 'csharp']" title="csharp">C#</a>
+          <a class="mars" [routerLink]="['/Panet', 'angular']" title="angular" >Angular</a>
+          <a class="jupiter" [routerLink]="['/Panet', 'nodejs']"  title="jupiter" >Node.js</a>
+          <a class="saturn" [routerLink]="['/Panet','cloud']" title="saturn" >Cloud / Azure</a>
+          <a class="uranus" [routerLink]="['/Panet', 'agile']" title="uranus" >Agile</a>
+          <a class="neptune" [routerLink]="['/Panet', 'neptune']" title="neptune">Neptune</a>
         </div>
         <div id="universe" class="scale-stretched">
           <div id="galaxy">
-            <div id="solar-system" class="earth">
+            <div #solarSystem id="solar-system" class="earth">
               <div id="javascript" class="orbit">
                 <div class="pos">
                   <div class="planet">

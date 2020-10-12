@@ -10,6 +10,7 @@ import { WorkAndPlayDetailsComponent } from './Components/projectDetails/work-an
 import { CoreComponent } from './Components/core/core.component';
 import { LoveComponent } from './Components/love/love.component';
 import { WorkComponent } from './Components/work/work.component';
+import { PlanetCardComponent } from './layout/Cards/planet-card/planet-card.component';
 
 
 const routes: Routes = [
@@ -20,8 +21,9 @@ const routes: Routes = [
   { path: 'About/Love', component: LoveComponent },
   { path: 'About/Work', component: WorkComponent },
   { path: 'Skills', component: SkillsComponent , data: {animation: 'Skills'} },
+  { path: 'Planet/:PlanetId', component: PlanetCardComponent },
   { path: 'Projects', component: WorkAndPlayComponent, data: {animation: 'Projects'} },
-  { path: 'Projects/:ProjectsName', component: WorkAndPlayDetailsComponent, data:{animation: 'WorkAndPlayDetails'} },
+  { path: 'Projects/:ProjectName', component: WorkAndPlayDetailsComponent, data:{animation: 'WorkAndPlayDetails'} },
   { path: 'Contact', component: ContactComponent, data: {animation: 'Contact'} },
 ];
 

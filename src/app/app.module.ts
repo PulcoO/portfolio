@@ -35,6 +35,8 @@ import { Site1Component } from './layout/social_media_buttons/site1/site1.compon
 import { Site2Component } from './layout/social_media_buttons/site2/site2.component';
 import { Site3Component } from './layout/social_media_buttons/site3/site3.component';
 import { OpenfooterComponent } from './layout/social_media_buttons/openfooter/openfooter.component';
+import { PlanetCardComponent } from './layout/Cards/planet-card/planet-card.component';
+import { PlanetOverDirective } from './_Directives/planet-over.directive';
 
 @NgModule({
   declarations: [
@@ -66,6 +68,8 @@ import { OpenfooterComponent } from './layout/social_media_buttons/openfooter/op
     Site2Component,
     Site3Component,
     OpenfooterComponent,
+    PlanetCardComponent,
+    PlanetOverDirective,
   ],
   imports: [
     BrowserModule,

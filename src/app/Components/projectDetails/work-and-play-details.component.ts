@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-//DATA
-import { PROJECTS } from '../../_Data/Projects'
 //MODELS
 import { Project } from '../../_Models/Project/Project.model'
 import { ProjectImage } from '../../_Models/Project/ProjectImage.model'
 //SERVICES
 import { ProjectService } from '../../_Services/Project/Project.service';
+declare var $ :any;
 
 
 @Component({
@@ -14,78 +13,61 @@ import { ProjectService } from '../../_Services/Project/Project.service';
   templateUrl: './work-and-play-details.component.html',
   styleUrls: ['./work-and-play-details.component.scss']
 })
-export class WorkAndPlayDetailsComponent implements OnInit {
-  workLength: Number;
-  workDetailIndex : Number;
-  workDetailArray;
-  workDetail : Project = {} as Project;
 
+export class WorkAndPlayDetailsComponent implements OnInit {
+
+  public project : Project;
+  
   backgroundColor: string = "";
 
-  workImage;
-  previousImage;
-  nextImage; 
-  workImageArray = this.workDetail.images;
-  workImageIndex = 0;
-  workImageLength;
-  
+  public imagesPath = "./assets/projects/";
 
-  constructor( private route: ActivatedRoute) {
-    this.route.params.subscribe( params => {
-      let workAndPlayName = params.workAndPlayName;
-      this.getWork(workAndPlayName);
-      this.workDetail = this.workDetailArray[0]
-      this.backgroundColor = this.workDetail.color;
-    })
+  public image1 : string;
+  public image2 : string;
+  public image3 : string;
+  public image4 : string;
+  public image5 : string;
+
+  constructor( 
+    private _activeRoute: ActivatedRoute,
+    private _projectService : ProjectService
+    ) {
    }
 
   ngOnInit() {
-    this.getWorkLength();
-    this.getWorkImagesLenght();
-    this.getWorkImages(this.workImageIndex)
-  }
-
-  getWorkLength(){
-    return this.workLength = PROJECTS.length
-  }
-  getWorkImagesLenght(){
-    return this.workImageLength = this.workDetail.images.length
-  }
-  getWorkImages(index){
-    console.log(index)
-    this.workImage = this.workDetail.images[index]
-      if(index == this.workImageLength){
-        this.nextImage = this.workDetail.images[0]
-        this.previousImage = this.workDetail.images[index - 1]
-      }else if(index == 0){
-        this.nextImage = this.workDetail.images[index + 1]
-        this.previousImage = this.workDetail.images[this.workImageLength - 1]
-      }else{
-        this.nextImage = this.workDetail.images[index + 1]
-        this.previousImage = this.workDetail.images[index - 1]
-      }
-  }
-
-  changePrincipalImage($event: string){
-    let id = parseInt($event.split('-')[1]);
-    if (id == this.workImage.id){
-      return;
-    }else{
-      this.workImageIndex = id - 1;
-      this.getWorkImages(this.workImageIndex)
-    }
-  }
-
-  getWork(workAndPlayName)
-  {
-    this.workDetailArray = PROJECTS.filter(function (object) 
-    {
-      return object.name == workAndPlayName
+    this._activeRoute.params.subscribe( routeParams => {
+      this.getProject()
     })
-    this.workDetailIndex = 1 + PROJECTS.findIndex(function (object)
-    {
-      return object.name == workAndPlayName
-    })
+    this.defineImage(this.project);
     
   }
+
+  private getProject(){
+    const PROJECTNAME = this._activeRoute.snapshot.paramMap.get('ProjectName')
+    this._projectService.getProjectsByName(PROJECTNAME)
+      .subscribe(project => this.project = project)
+  }
+
+  private defineImage(project){
+    switch (project.id){
+      case "workAndPlay-1": {
+        console.log(project.images)
+        this.image1 = this.imagesPath + project.images[0].name + "-" + project.images[0].id + "." + project.images[0].format;
+        this.image2 = this.imagesPath + project.images[1].name + "-" + project.images[1].id + "." + project.images[1].format;
+        this.image3 = this.imagesPath + project.images[2].name + "-" + project.images[2].id + "." + project.images[2].format;
+        this.image4 = this.imagesPath + project.images[3].name + "-" + project.images[1].id + "." + project.images[1].format;
+        this.image5 = this.imagesPath + project.images[4].name + "-" + project.images[1].id + "." + project.images[1].format;
+        break;
+      }
+      case "workAndPlay-2": {
+        this.image1 = this.imagesPath + project.images[0].name + "-" + project.images[0].id + "." + project.images[0].format;
+        this.image2 = this.imagesPath + project.images[1].name + "-" + project.images[1].id + "." + project.images[1].format;
+        this.image3 = this.imagesPath + project.images[2].name + "-" + project.images[2].id + "." + project.images[2].format;
+        this.image4 = this.imagesPath + project.images[3].name + "-" + project.images[3].id + "." + project.images[3].format;
+        this.image5 = this.imagesPath + project.images[4].name + "-" + project.images[4].id + "." + project.images[4].format;
+        break;
+      }
+    }
+  }
+  
 }

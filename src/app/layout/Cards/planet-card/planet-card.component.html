@@ -1,0 +1,41 @@
+<div class="page">
+    <div class="content">
+        <div id="card_container">
+            <div class="card_image__container">
+                <div *ngIf="planet.id == 'htmlcss'; then thenBlock else elseBlock"></div>
+                    <ng-template #thenBlock>
+                        <div id="planet__container">
+                            <div id="html_css"></div>
+                        </div>
+                    </ng-template>
+                    <ng-template #elseBlock>
+                        <div id="planet__container">
+                            <div class="planet_type" id="{{planet.id}}">
+                                <div class="pos">
+                                  <div class="planet">
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-template>
+                
+            </div>
+            <div class="card_text__container">
+                <div class="card_text__card">
+                    <div class="card_text__card card__top">
+                        <h6>Planet :</h6>
+                        <h1>{{planet.name}}</h1>
+                    </div>
+                    <div class="card_text__card card__body">
+                        <h6>Info :</h6>
+                        <p>{{planet.content}}</p>
+                    </div>
+
+                    <div class="card_text__card card__bottom">
+                        <a [routerLink]="['/Skills']"><app-cancel-button></app-cancel-button></a>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+</div>
