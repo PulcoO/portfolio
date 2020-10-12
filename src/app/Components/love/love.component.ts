@@ -193,8 +193,8 @@ public activeLoveTitle ;
       }
       
     });
-    console.log(this.loveArray.filter(l => l.imageName === 'LoveGameOfThrone'))
-    console.log(this.getTitleOfLoveById('LoveGameOfThrone'))
+    // console.log(this.loveArray.filter(l => l.imageName === 'LoveGameOfThrone'))
+    // console.log(this.getTitleOfLoveById('LoveGameOfThrone'))
       }
 
   getTitleOfLoveById(activeLoveId){

@@ -36,18 +36,51 @@
 .md-form{
     display: flex;
     flex-flow: row nowrap;
+    color: white;
 }
 .md-form input {
-    background-color:  rgba($color: black, $alpha: 0.1);
+    transition: 0.5s;
+    color: white!important;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+}
+.md-form input:focus{
+    background-color:  rgba($color: #FFA000, $alpha: 0.6);
 }
 .md-form textarea {
-    background-color:  rgba($color: black, $alpha: 0.1);
+    transition: 0.5s;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+}
+.md-form textarea:focus{
+    padding: 15px;
+    background-color:  rgba($color: #FFA000, $alpha: 0.6);
 }
 
 .md-form label{
     padding-left: 2%;
     font-family: AmaticBold, Arial, Helvetica, sans-serif;
     letter-spacing: 0.2rem;
-    font-size: 1rem;
+    text-align: center;
+    font-size: 1.2rem;
     color: white;
+}
+
+
+
+@media only screen and (max-width: 480px){
+    .page{
+        .content{
+            h1{
+                font-size: 2rem;
+                letter-spacing: 0.5rem;
+            }
+        }
+    }
+    #contact_form_container{
+        width: 90%;
+    }
 }

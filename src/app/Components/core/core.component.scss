@@ -9,6 +9,7 @@ $ease:ease-in-out;
     background-color: #E8A0B8;
     height: 100vh;
     width: 100%;
+    overflow: scroll;
 }
 
 .content {
@@ -17,7 +18,7 @@ $ease:ease-in-out;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-flow: column nowrap;
+    flex-flow: column wrap;
     color: white;
     #core_container{
         display: flex;
@@ -90,6 +91,34 @@ $ease:ease-in-out;
     }
 }
 
+@media only screen and (max-width : 480px){
+    .content{
+        #core_container{
+            .core_text__container{
+                width: 100%;
+                .core_text__card{
+                    .card__top{
+                        a {
+                            margin-bottom: 30px;
+                        }
+                        h1{
+                            font-size: 2rem;
+                        }
+                    }
+                    .card__body{
+                        margin-bottom: 30px;
+                        p{
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .holder{
+        display: none;
+    }
+}
 
 
 

@@ -16,6 +16,7 @@
         position: absolute;
         top:10%;
         h1{
+            text-transform: uppercase;
             font-weight: bold;
             font-size: 70px;
             letter-spacing: 0.8rem;
@@ -138,3 +139,32 @@
     margin: 1.125rem auto;
     width: 70vw;
   }
+@media only screen and (max-width : 480px){
+  .page {
+    #sectionTitle{
+      h1{
+        font-size: 2rem;
+      }
+    }
+    .content{
+      #buttons_close__container{
+        margin-bottom: 30px;
+        width: 70%;
+      }
+    }
+    .carousel-wrapper{
+      width: 100%;
+      margin-bottom: 30px;
+      .carousel{
+        .slide{
+
+        }
+      }
+    }
+    .carousel-nav{
+      #buttons_next_prev__container{
+        width: 100%;
+      }
+    }
+  }
+}
