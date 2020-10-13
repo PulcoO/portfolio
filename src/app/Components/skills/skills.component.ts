@@ -25,7 +25,7 @@ export class SkillsComponent implements OnInit {
       var body = $(".page_content"),
           universe = $("#universe"),
           solarsys = $("#solar-system");
-    
+
       var init = function() {
         body.removeClass('view-2D opening').addClass("view-3D").delay(2000).queue(function() {
           $(this).removeClass('hide-UI').addClass("set-skills");
