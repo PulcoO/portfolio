@@ -19,7 +19,9 @@
     position: relative;
     margin: 0% 16% 0% 16%;
     background-color: transparent;
-    display: flex;
+	display: flex;
+	justify-content: center;
+	align-items: center;
     flex-flow: column nowrap;
 }
 
@@ -27,7 +29,7 @@
 	width: 70vw;
 	position: relative;
 	margin: 0 auto;
-	margin-top: 50px;
+	//margin-top: 50px;
 }
 
 .panel {
@@ -47,49 +49,25 @@
 	transition: all 0.2s ease-out;
 }
 
-.panel:nth-child(11n+1) {
-	margin-left: 0;
-}
-
-// .panel:nth-child(11n+4) {
-// 	margin-left: 0;
-// 	width: calc(((80vw - 20px)/3)*2);
-// 	height: calc((80vw - 60px)/3);
-// }
-
-.panel:nth-child(0n+1) {
+.panel:nth-child(1) {
 	margin-left: 0;
 	float: left;
 	width: calc((70vw - 60px)/3);
 	height: calc(((50vw - 20px)/3)*2 - 8px);
 }
 
-.panel:nth-child(0n+1) > .panel-wrapper > .panel-img {
-	//transform: translateX(-25%);
-}
-
-.panel:nth-child(0n+2) {
+.panel:nth-child(2) {
 	margin-left: 27px;
 	width: calc(((70vw - 20px)/3)*2);
 }
 
-.panel:nth-child(0n+3) {
+.panel:nth-child(3) {
 	margin-left: 27px;
 }
 
-.panel:nth-child(0n+4) {
-	float: none;
+.panel:nth-child(4) {
+	margin-left: 27px;
 }
-
-// .panel:nth-child(11n+10) {
-// 	margin-left: 0;
-// 	width: calc((80vw - 30px)/2);
-// }
-
-// .panel:nth-child(11n+11) {
-// 	width: calc((80vw - 30px)/2);
-// }
-
 
 .panel-wrapper {
 	position: relative;
@@ -176,4 +154,77 @@
 	margin: 0 auto;
 	min-width: 100%;
 	height: 100%;
+}
+
+@media (max-width: 991px ){
+	.project-details-content{
+		.masonry-container{
+			width: 90vw;
+		}
+	}
+	.panel {
+		width: calc((90vw - 60px)/3);
+		height: calc((60vw - 60px)/3);
+	}
+	
+	.panel:nth-child(1) {
+		margin-left: 0;
+		width: calc((90vw - 60px)/3);
+		height: calc(((60vw - 20px)/3)*2 - 8px);
+	}
+	
+	.panel:nth-child(2) {
+		margin-left: 27px;
+		width: calc(((90vw - 20px)/3)*2);
+	}
+	
+	.panel:nth-child(3) {
+		margin-left: 27px;
+	}
+	
+	.panel:nth-child(4) {
+		margin-left: 27px;
+	}
+
+}
+@media (max-width: 480px ){
+	.page{
+		height: auto;
+		.project-details-content{
+			margin: 0;
+			margin-top: 90px;
+			.masonry-container{
+				width: 90vw;
+			}
+		}
+		.panel {
+			height: 200px;
+			width: 100%;
+		}
+		
+		.panel:nth-child(1) {
+			margin: 0;
+			height: 450px;
+			width: 100%;
+		}
+		
+		.panel:nth-child(2) {
+			margin: 0;
+			margin-top: 15px;
+			height: 200px;
+			width: 100%;
+		}
+		
+		.panel:nth-child(3) {
+			margin: 0;
+			margin-top: 15px;
+		}
+		
+		.panel:nth-child(4) {
+			margin: 0;
+			margin-top: 15px;
+		}
+	}
+	
+
 }
