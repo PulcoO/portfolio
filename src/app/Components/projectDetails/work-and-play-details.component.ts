@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import {
+  animate, state, style, transition, trigger
+} from '@angular/animations';
 //MODELS
 import { Project } from '../../_Models/Project/Project.model'
 import { ProjectImage } from '../../_Models/Project/ProjectImage.model'
@@ -11,7 +14,7 @@ declare var $ :any;
 @Component({
   selector: 'app-work-and-play-details',
   templateUrl: './work-and-play-details.component.html',
-  styleUrls: ['./work-and-play-details.component.scss']
+  styleUrls: ['./work-and-play-details.component.scss'],
 })
 
 export class WorkAndPlayDetailsComponent implements OnInit {
@@ -21,6 +24,7 @@ export class WorkAndPlayDetailsComponent implements OnInit {
   backgroundColor: string = "";
 
   public imagesPath = "./assets/projects/";
+
 
   public image1 : string;
   public image2 : string;
