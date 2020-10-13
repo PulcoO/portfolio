@@ -37,6 +37,7 @@ import { Site3Component } from './layout/social_media_buttons/site3/site3.compon
 import { OpenfooterComponent } from './layout/social_media_buttons/openfooter/openfooter.component';
 import { PlanetCardComponent } from './layout/Cards/planet-card/planet-card.component';
 import { PlanetOverDirective } from './_Directives/planet-over.directive';
+import { MaterialModule } from './material/material.module';
 
 @NgModule({
   declarations: [
@@ -77,6 +78,7 @@ import { PlanetOverDirective } from './_Directives/planet-over.directive';
     BrowserAnimationsModule,
     FormsModule,
     MDBBootstrapModule.forRoot(),
+    MaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

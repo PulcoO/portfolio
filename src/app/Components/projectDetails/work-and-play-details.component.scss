@@ -29,7 +29,6 @@
 	width: 70vw;
 	position: relative;
 	margin: 0 auto;
-	//margin-top: 50px;
 }
 
 .panel {
@@ -154,6 +153,27 @@
 	margin: 0 auto;
 	min-width: 100%;
 	height: 100%;
+}
+
+//panels 
+#panel_slider__container{
+	display: flex;
+	justify-content: center;
+	align-items: stretch;
+	width: 100%;
+	height: 200px;
+}
+
+mat-tab-group {
+	text-align: center;
+	width: 90%;
+}
+mat-tab-group p {
+	padding-top: 20px;
+}
+.mat-tab-labels {
+    display: flex;
+    justify-content: center;
 }
 
 @media (max-width: 991px ){
