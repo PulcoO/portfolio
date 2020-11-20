@@ -3,27 +3,28 @@
         <h1>Contact me</h1>
         <div id="contact_form_container">
             <mdb-card-body class="mx-4">
+              <form [formGroup]="contactForm" (ngSubmit)="onSubmit(contactForm.value)">
                 <div class="md-form">
                   <mdb-icon fas icon="user" class="prefix white-text"></mdb-icon>
-                  <input type="text" id="form104" class="form-control" mdbInput>
+                  <input type="text" id="form104" class="form-control" formControlName="name" required mdbInput>
                   <label for="form104">Your name</label>
                 </div>
           
                 <div class="md-form">
                   <mdb-icon fas icon="envelope" class="prefix white-text"></mdb-icon>
-                  <input type="text" id="form105" class="form-control" mdbInput>
+                  <input type="email" id="form105" class="form-control" formControlName="email" required mdbInput>
                   <label for="form105">Your email</label>
                 </div>
           
                 <div class="md-form">
                   <mdb-icon fas icon="tag" class="prefix white-text"></mdb-icon>
-                  <input type="text" id="form106" class="form-control" mdbInput>
+                  <input type="text" id="form106" class="form-control" formControlName="subject" mdbInput>
                   <label for="form106">Subject</label>
                 </div>
           
                 <div class="md-form">
                   <mdb-icon fas icon="pencil-alt" class="prefix white-text"></mdb-icon>
-                  <textarea type="text" id="form107" class="md-textarea md-textarea-auto form-control" rows="5" mdbInput></textarea>
+                  <textarea type="text" id="form107" class="md-textarea md-textarea-auto form-control" required rows="5" formControlName="message" mdbInput></textarea>
                   <label for="form107">Your message</label>
                 </div>
                 <!--Grid row-->
@@ -31,14 +32,15 @@
                     <!--Grid column-->
                     <div class="col-md-12">
                         <div class="text-center">
-                          <button mdbBtn type="button" size="lg" color="amber" class="waves-light text-uppercase font-weight-bold" mdbWavesEffect>Send</button>
+                          <button mdbBtn type="button" size="lg" color="amber" class="waves-light text-uppercase font-weight-bold" [disabled]="!contactForm.valid" mdbWavesEffect>Send</button>
                         </div>
                     </div>
                     <!--Grid column-->
             
                     </div>
                 <!--Grid row-->
-              </mdb-card-body>  
+              </form>
+            </mdb-card-body>  
         </div> 
     </div>
 </div>
