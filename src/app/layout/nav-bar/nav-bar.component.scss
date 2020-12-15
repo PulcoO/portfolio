@@ -173,6 +173,13 @@
     }
 }
 
+@media(min-width: 200px) and (max-width:1300px){
+    .container-element .css-text-animation p{
+        font-size : 0.7rem;
+        font-style: bold;
+    }
+}
+
 /************************* Hamburger *******************/
   #nav-burger {
     display: none;
@@ -274,3 +281,11 @@
         display: block;
     }
 }
+
+@media only screen and (max-width: 1300px){
+    .nav-burger_Container .container-text{
+        font-family: Amatic, Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        font-weight: bold;
+      }
+} 

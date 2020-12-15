@@ -13,6 +13,7 @@ import { ProjectService } from '../../_Services/Project/Project.service';
   styleUrls: ['./work-and-play.component.scss'],
   animations: [pageAnimations],
 })
+
 export class WorkAndPlayComponent implements OnInit {
   @HostBinding('@pageAnimations')
   animatePage = true;

@@ -38,6 +38,9 @@ import { OpenfooterComponent } from './layout/social_media_buttons/openfooter/op
 import { PlanetCardComponent } from './layout/Cards/planet-card/planet-card.component';
 import { PlanetOverDirective } from './_Directives/planet-over.directive';
 import { MaterialModule } from './material/material.module';
+//services
+import { ProjectService } from './_Services/Project/Project.service';
+import { PlanetService } from './_Services/Planet/planet.service';
 
 @NgModule({
   declarations: [
@@ -80,7 +83,11 @@ import { MaterialModule } from './material/material.module';
     MaterialModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  //Ici pour ce que j'en ai compris, il d'agit de notre injection de dépendance ! alors inject .... question pourquoi si je le retire cela fonctionne trés bien.
+  providers: [
+    { provide : ProjectService, useClass: ProjectService},
+    { provide : PlanetService, useClass: PlanetService },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

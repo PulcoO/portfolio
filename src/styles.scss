@@ -15,10 +15,30 @@
 // overflow-y:hidden
 // } 
 
+//Normalisation Scroll-Bar
 ::-webkit-scrollbar{
     display: none;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
-
+html{
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.page::-webkit-scrollbar {
+    display: none;
+}
+.page{
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+body{
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
 
 body {
     margin: 0;
@@ -26,8 +46,11 @@ body {
     font-family: Amatic, Arial, Helvetica, sans-serif;
     box-sizing: border-box;
     height: 100%;
+
     //overflow-y: hidden;
     //overflow-x: hidden;
 }
+
+
 
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

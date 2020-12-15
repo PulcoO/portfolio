@@ -8,6 +8,14 @@
     width: 100%;
 }
 
+.project_content::-webkit-scrollbar {
+    display: none;
+}
+.project_content{
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
 .project_content {
     height: 100%;
     position: relative;
